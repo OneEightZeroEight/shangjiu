@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+
+
 // 路由
 import { HashRouter as Router} from "react-router-dom";
 // 状态管理 配置store的
