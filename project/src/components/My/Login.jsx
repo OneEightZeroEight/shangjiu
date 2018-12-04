@@ -28,7 +28,7 @@ class SMy extends React.Component {
                     <Input placeholder="Basic usage" maxLength="20" type="password" placeholder="请输入密码" maxLength="20" />
 
                     <Button type="primary" block style={{
-                        height: "2.8125rem","font-size": "0.9rem"
+                        height: "2.8125rem","fontSize": "0.9rem"
 
                     }}>登&nbsp;&nbsp;&nbsp;录</Button>
                     <p className="text-bottom">

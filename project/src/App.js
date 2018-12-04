@@ -15,9 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Sheader></Sheader>
-          <Sbanner></Sbanner>
+          {/*<Sheader></Sheader>*/}
+          {/*<Sbanner></Sbanner>*/}
           <Route path="/my/" component={SMy} />
+      </div>
     );
   }
 }
