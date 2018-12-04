@@ -1,5 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router } from "react-router-dom";
+import Sheader from "./components/Home/Sheader.jsx";
+
+
+import './styles/Sheader.css';
+import './styles/Sbanner.css';
+import './styles/base.css';
 
 
 
@@ -15,17 +22,12 @@ import axios from 'axios';
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
 
-React.axios = axios;
-
-
 ReactDOM.render(
-    <Provider>
-            <Router>
-                <App />
-            </Router>
-    </Provider>,
-     document.getElementById('root')
-);
-
+    // <Router>
+        <App />,
+    // </Router>,
+    document.getElementById('root')
+    );
+React.axios = axios;
 
 serviceWorker.unregister();

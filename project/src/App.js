@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Route } from "react-router-dom";
+import { Route} from "react-router-dom";
+import Sheader from './components/Home/Sheader.jsx';
+import Sbanner from './components/Home/Sbanner.jsx';
+
 
 import Button from 'antd/lib/button';
 
@@ -12,8 +15,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+          <Sheader></Sheader>
+          <Sbanner></Sbanner>
           <Route path="/my/" component={SMy} />
-      </div>
     );
   }
 }
