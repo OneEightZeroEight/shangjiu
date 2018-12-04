@@ -4,6 +4,8 @@ import Icon from 'antd/lib/icon';
 import { Input } from 'antd';
 import { Button } from 'antd';
 
+import '../../css/my.css';
+
 
 class SMy extends React.Component {
     constructor(props) {
@@ -17,7 +19,8 @@ class SMy extends React.Component {
                     <a className="action-back" default-back-url="/">
                         <Icon type="left" />
                     </a>
-                    用户登录
+                    <span>用户登录</span>
+                    <span></span>
                 </div>
 
                 <div className="user-passport">
@@ -27,7 +30,7 @@ class SMy extends React.Component {
                     <Button type="primary" block>登&nbsp;&nbsp;&nbsp;录</Button>
                     <p className="text-bottom">
                         没有账户？
-                        <a className="text-go" href="javascript:location.href='/user/register'+getUrlParams()">立即注册</a>
+                        <a className="text-go" href="javascript:location.href='/user/register'+getUrlParams()">立即注册</a>|
                         <a className="mui-pull-right" href="/user/resetpwd">忘记密码？</a>
                     </p>
                 </div>
