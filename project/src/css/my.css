@@ -39,4 +39,25 @@ html {
     color: #fff;
     border: 1px solid #bb0511;
     background-color: #bb0511;
-    width: 21.5625rem; }
+    width: 21.5625rem;
+    margin: 0.625rem auto; }
+
+.example-input{
+  height: 3.0rem;
+  width: 21.5625rem;
+  margin: 10px auto;
+}
+  .smsCode{
+    display:inline-block;
+    float: right;
+    width: 45%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 3px;
+
+  }
+  .text-bottom{
+    float: right;
+    margin-right: 1.0rem;
+  }
