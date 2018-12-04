@@ -11,7 +11,7 @@ class Index extends Component {
         return (
             <div>
                 <Sheader></Sheader>
-                <Sbanner></Sbanner>
+                // <Sbanner></Sbanner>
             </div>
         );
     }
