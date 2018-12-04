@@ -1,11 +1,16 @@
 import React from "react";
 import { connect } from 'react-redux';
-import Icon from 'antd/lib/icon';
-import { Input } from 'antd';
-import { Button } from 'antd';
+
+import { Route } from "react-router-dom";
+
+import Login from "./Login"
+import Register from "./Register"
 
 import '../../css/my.css';
 
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+const location = history.location;
 
 class SMy extends React.Component {
     constructor(props) {
@@ -15,25 +20,8 @@ class SMy extends React.Component {
     render() {
         return (
             <div>
-                <div className="top-bar">
-                    <a className="action-back" default-back-url="/">
-                        <Icon type="left" />
-                    </a>
-                    <span>用户登录</span>
-                    <span></span>
-                </div>
-
-                <div className="user-passport">
-                    <Input placeholder="Basic usage" placeholder="手机号码/邮箱" maxLength="20"/>
-                    <Input placeholder="Basic usage" placeholder="手机号码/邮箱" maxLength="20" type="password" placeholder="请输入密码" maxLength="20" />
-
-                    <Button type="primary" block>登&nbsp;&nbsp;&nbsp;录</Button>
-                    <p className="text-bottom">
-                        没有账户？
-                        <a className="text-go" href="javascript:location.href='/user/register'+getUrlParams()">立即注册</a>|
-                        <a className="mui-pull-right" href="/user/resetpwd">忘记密码？</a>
-                    </p>
-                </div>
+                <Route path="/my/login/" component={Login} />
+                <Route path="/my/register/" component={Register} />
             </div>
 
         )

@@ -18,6 +18,7 @@ import SMy from './components/My/SMy.jsx';
 class App extends Component {
   render() {
     return (
+
       <div className="App">     
           <Route path="/qwe/" component={Sheader} />
           <Sbanner></Sbanner>
