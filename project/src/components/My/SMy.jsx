@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
+
 import { Route } from "react-router-dom";
 
 import Login from "./Login"
@@ -7,6 +8,9 @@ import Register from "./Register"
 
 import '../../css/my.css';
 
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+const location = history.location;
 
 class SMy extends React.Component {
     constructor(props) {

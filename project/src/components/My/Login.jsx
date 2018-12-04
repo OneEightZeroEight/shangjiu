@@ -12,6 +12,10 @@ class SMy extends React.Component {
         super(props)
         this.props = props;
     }
+    goRegister(){
+        this.props.history.push('/my/register/', { some: 'state' })
+        console.log(888)
+    }
     render() {
         return (
             <div>
@@ -33,8 +37,8 @@ class SMy extends React.Component {
                     }}>登&nbsp;&nbsp;&nbsp;录</Button>
                     <p className="text-bottom">
                         没有账户？
-                        <a className="text-go" href="javascript:location.href='/user/register'+getUrlParams()">立即注册</a>|
-                        <a className="mui-pull-right" href="/user/resetpwd">忘记密码？</a>
+                        <span className="mui-pull-right" onClick={this.goRegister.bind(this)} style={{color:"#1890ff"}}>立即注册</span>|
+                        <span className="mui-pull-right" onClick={this.goRegister.bind(this)} style={{color:"#1890ff"}}>忘记密码？</span>|
                     </p>
                 </div>
             </div>

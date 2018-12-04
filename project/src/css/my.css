@@ -20,6 +20,20 @@ html {
 
 .user-passport {
   margin-top: 3.4375rem; }
+  .user-passport .example-input {
+    width: 21.5625rem;
+    margin: 0 auto;
+    height: 3.75rem; }
+    .user-passport .example-input .smsCode {
+      display: inline-block;
+      float: right;
+      width: 41%;
+      height: 2.8125rem;
+      margin-left: 5%;
+      padding: 0;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 3px; }
   .user-passport input {
     line-height: 21px;
     width: 21.5625rem;

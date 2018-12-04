@@ -27,6 +27,21 @@ html {
 }
 .user-passport{
   margin-top: pxToRem(55px);
+  .example-input{
+    width: pxToRem(345px);
+    height: pxToRem(60px);
+    margin: 0 auto;
+    .smsCode{
+      display: inline-block;
+      float: right;
+      width: 41%;
+      height: pxToRem(45px);
+      padding: 0;
+      text-align: center;
+      border: 1px solid rgba(0,0,0,.2);
+      border-radius: 3px;
+    }
+  }
   input{
     line-height: 21px;
     width: pxToRem(345px);
