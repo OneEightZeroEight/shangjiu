@@ -8,9 +8,19 @@ import './styles/Sheader.css';
 import './styles/Sbanner.css';
 import './styles/base.css';
 
+
+
+// 路由
+import { HashRouter as Router} from "react-router-dom";
+// 状态管理 配置store的
+import { createStore } from 'redux'
+// 把上面配置好的store和react进行关联
+import { Provider } from 'react-redux';
+
+import axios from 'axios';
+
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
-
 
 ReactDOM.render(
     // <Router>
@@ -18,8 +28,6 @@ ReactDOM.render(
     // </Router>,
     document.getElementById('root')
     );
+React.axios = axios;
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();

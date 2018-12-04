@@ -1,0 +1,52 @@
+$baseFontSize:16px !default;
+// pixels to rems
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+html {
+  font-size: $baseFontSize;
+  -ms-touch-action: none;
+}
+
+.top-bar {
+  position: fixed;
+  z-index: 990;
+  width: 100%;
+  top: 0;
+  height: pxToRem(45px);
+  line-height: pxToRem(45px);
+  border-bottom: 1px solid #e1e1e1;
+  text-align: center;
+  background-color: #fff;
+  font-weight: 600;
+  background: linear-gradient(180deg, #fff, #efefef);
+  padding: 0 pxToRem(20px);
+  a{
+    float: left;
+  }
+}
+.user-passport{
+  margin-top: pxToRem(55px);
+  input{
+    line-height: 21px;
+    width: pxToRem(345px);
+    height: pxToRem(40px);
+    margin-bottom: pxToRem(15px);
+    padding: pxToRem(10px) pxToRem(15px);
+    -webkit-user-select: text;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    outline: 0;
+    background-color: #fff;
+    -webkit-appearance: none;
+  }
+  button{
+    display: block;
+    padding: 10px 12px;
+    font-size: .7rem;
+    color: #fff;
+    border: 1px solid #bb0511;
+    background-color: #bb0511;
+    width: pxToRem(345px);
+  }
+}

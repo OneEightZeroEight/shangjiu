@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { Route} from "react-router-dom";
-import Sheader from './components/Home/Sheader.jsx'
-import Sbanner from './components/Home/Sbanner.jsx'
+import Sheader from './components/Home/Sheader.jsx';
+import Sbanner from './components/Home/Sbanner.jsx';
+
+
+import Button from 'antd/lib/button';
+
+import './styles/App.css';
+
+
+import SMy from './components/My/SMy.jsx';
 
 class App extends Component {
   render() {
@@ -9,7 +17,7 @@ class App extends Component {
       <div className="App">
           <Sheader></Sheader>
           <Sbanner></Sbanner>
-      </div>
+          <Route path="/my/" component={SMy} />
     );
   }
 }
