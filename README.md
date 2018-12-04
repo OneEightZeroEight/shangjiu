@@ -2,8 +2,9 @@
 
 环境：
     create-react-app shangjiu
-    npm add antd 
+    npm add antd                 ant.desgin
     npm install react-router-dom 路由
+    npm install axios
 
 
 首页:    header
