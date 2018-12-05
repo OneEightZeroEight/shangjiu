@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router} from "react-router-dom";
 import { Provider } from 'react-redux';
 // 状态管理 配置store的
-
-
 // 路由
 // 状态管理 配置store的
 // import { createStore } from 'redux'
@@ -13,11 +11,13 @@ import { Provider } from 'react-redux';
 
 import axios from 'axios';
 import './styles/index.css';
+import './sass/shouye/Sheader.scss';
 import './styles/App.css';
-import './styles/Sheader.css';
-import './styles/Sbanner.css';
-// import './styles/list.css';
-import './styles/nav.css';
+import './sass/shouye/Sbanner.scss';
+import './sass/shouye/Szhenxuan.scss';
+import './sass/shouye/Snav.scss';
+import './sass/shouye/animate.scss';
+import './sass/shouye/bottom.scss';
 import './styles/base.css';
 import './css/my.css';
 import App from './App';

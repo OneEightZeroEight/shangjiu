@@ -1,5 +1,5 @@
 .navlist{
-    padding-top: 10px;
+    padding: 10px 0 20px 0;
     width: 375px;
     background: #fff;
 }
@@ -9,10 +9,11 @@
 .navlist li a{
     margin: 0px auto;
     display: inline-block;
-    text-align: center;
     width: 72px;
     margin: 10px 10px 0 10px;
-}
+    text-align: center;
+}    
+
 .navlist li a p{
     font-size: 12px;
     color: #9a9a9a;
@@ -25,7 +26,8 @@
 .newsBox{
     width: 375px;
     border-top: 1px solid #9a9a9a;
-    margin-top: 10px;
+    background: #fff;
+    padding-bottom: 10px;
 }
 .newsBox .news-tle{
     font-size: 16px;

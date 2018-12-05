@@ -45,7 +45,7 @@ class Snav extends React.Component {
                     </ul>
                 </div>
 
-                <div className="newsBox">
+                <div className="newsBox clearfix">
                     <a href="/article" className="news">
                         <div className="news-tle">上酒资讯</div> 
 

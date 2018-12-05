@@ -1,0 +1,65 @@
+.logo-box{
+    width: 100%;
+    height: 46px;
+    overflow: hidden;
+    padding: .3rem .625rem;
+    background-color: #ba1c22;
+    position:fixed;
+    top:0;
+    z-index:999;
+    h1{
+        text-indent: -30000em;
+        float: left;
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+        a{
+            display: block;
+            width: 88px;
+            height: 34px;
+            img{
+                 width: 88px;
+                height: 34px;
+            }
+        }
+    }
+    .search_index{
+        margin-left: .625rem;
+        margin-top: 7px;
+        width: 205px;
+        height: 24px;
+        border-radius: 5px;
+        float: left;
+        line-height: 24px;
+        display: block;
+        padding: 0 0 0 30px;
+        position: relative;
+        background: url(../../imgs/search_icon.png) no-repeat left center #fff;
+        input{
+            padding-left: 20px;
+            width: 100%;
+            height: .8rem;
+            line-height: .8rem;
+            margin-bottom: 0;
+            padding: 0;
+            border: 0;
+            font-size: .8em;
+        }
+
+    }
+    .messages_icon{
+        float: right;
+        a{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin:8px 10px 0 0 ;
+            img{
+                width: 24px;
+                height: 24px;
+               
+            }
+        }
+    }
+    
+}
