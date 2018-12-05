@@ -5,6 +5,11 @@ import { Route } from "react-router-dom";
 
 import Login from "./Login"
 import Register from "./Register"
+import PersonCenter from "./PersonalCenter"
+import Shopcar from "./Shopcar"
+import MyAddress from "./MyAddress"
+import AddAddress from "./address/addAddr"
+
 
 import '../../css/my.css';
 
@@ -22,6 +27,10 @@ class SMy extends React.Component {
             <div>
                 <Route path="/my/login/" component={Login} />
                 <Route path="/my/register/" component={Register} />
+                <Route path="/my/center/" component={PersonCenter} />
+                <Route path="/my/shopcar/" component={Shopcar} />
+                <Route path="/my/address/" component={MyAddress} />
+                <Route path="/my/addaddress/" component={AddAddress} />
             </div>
 
         )

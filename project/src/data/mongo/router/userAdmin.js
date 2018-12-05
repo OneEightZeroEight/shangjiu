@@ -22,10 +22,10 @@ Router.post("/userLogin",(req,res)=>{
         console.log(req.body);
         var dataObj = req.body;
 
-        User.find({$and: [{$or:[{"uname":dataObj["uname"] },{"email":dataObj["uname"] }]}, {"pwd": dataObj["pwd"]}]})
+        User.find({$and:[{"userName":dataObj["userName"] },{"userPass":dataObj["userPass"] }]})
             .then((data)=>{
                 console.log(data);
-                if((data[0]["uname"] == dataObj["uname"] || data[0]["email"] == dataObj["uname"])&& data[0]["pwd"] == dataObj["pwd"]){
+                if((data[0]["userName"] == dataObj["userName"] && data[0]["userPass"] == dataObj["userPass"])){
                     res.send({err:0,msg:'loginSuccess',data:null});
                 }
             })
@@ -52,8 +52,7 @@ Router.post("/userLogin",(req,res)=>{
  * @apiSuccess {String} data  返回数据
  */
 Router.post("/addUserInfo",(req,res)=>{
-    let status = req.body.status?req.body.status:1;
-    User.insertMany({email:req.body.email,uname:req.body.uname,pwd:req.body.pwd,status:status})
+    User.insertMany({userName:req.body.userName,userPass:req.body.userPass})
         .then((data)=>{
             console.log(data);
             res.send({err:0,msg:'addSuccess',data:null})

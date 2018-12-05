@@ -30,6 +30,7 @@ router.get('/get-img-verify', function (req, res) {
 
 //验证
 router.get('/VerificationCode', function (req, res, next) {
+    console.log(req.query.imageCode);
     setTimeout(function () {
         CodeArr = [];
     },60000);
@@ -43,6 +44,18 @@ router.get('/VerificationCode', function (req, res, next) {
         res.send({err:0,msg:"验证码正确",data:null});
     }
 });
+
+//发送短信验证码
+// router.post('/sendMsgCode', function (req, res, next) {
+//     console.log(req.body.mobile);
+//     let mobile = req.body.mobile;
+//     let randomNum = Math.ceil(Math.random()*90000)+10000;
+//     router.post("127.0.0.1:3000/add",{
+//         param:randomNum,
+//         mobile:mobile
+//     })
+//
+// });
 
 
 module.exports = router;
