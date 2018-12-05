@@ -16,10 +16,8 @@ import './styles/index.css';
 import './styles/App.css';
 import './styles/Sheader.css';
 import './styles/Sbanner.css';
-// import './styles/list.css';
 import './styles/nav.css';
 import './styles/base.css';
-import './css/my.css';
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
 
