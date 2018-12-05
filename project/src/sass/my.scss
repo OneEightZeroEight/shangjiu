@@ -4,6 +4,7 @@ $baseFontSize:16px !default;
   @return $px / $baseFontSize * 1rem;
 }
 html {
+  width: pxToRem(375px);
   font-size: $baseFontSize;
   -ms-touch-action: none;
 }

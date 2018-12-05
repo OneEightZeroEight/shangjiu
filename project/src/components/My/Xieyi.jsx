@@ -4,8 +4,6 @@ import Icon from 'antd/lib/icon';
 import { Input } from 'antd';
 import { Button } from 'antd';
 
-
-
 class Xieyi extends React.Component {
     constructor(props) {
         super(props)
@@ -15,7 +13,6 @@ class Xieyi extends React.Component {
         }
     }
 
-
     isHide() {
         this.setState({
             isShow:false,
@@ -23,8 +20,6 @@ class Xieyi extends React.Component {
         console.log(777)
         console.log(this.state.isShow)
     }
-
-
 
     render() {
         return (
