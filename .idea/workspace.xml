@@ -58,7 +58,7 @@
             <entry file="file://$PROJECT_DIR$/project/src/components/My/SMy.jsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="220">
-                  <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+                  <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -67,7 +67,7 @@
             <entry file="file://$PROJECT_DIR$/project/src/data/server.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="220">
-                  <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+                  <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
                 </state>
               </provider>
             </entry>
@@ -94,7 +94,7 @@
             <entry file="file://$PROJECT_DIR$/project/src/data/mongo/router/sendEmail.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="418">
-                  <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+                  <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -102,8 +102,8 @@
           <file leaf-file-name="MyAddress.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/project/src/components/My/MyAddress.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+                <state relative-caret-position="242">
+                  <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -128,7 +128,7 @@
             <entry file="file://$PROJECT_DIR$/project/src/components/My/address/addAddr.jsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="294">
-                  <caret line="168" column="20" lean-forward="true" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
+                  <caret line="168" column="20" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -220,7 +220,7 @@
       <path value="$PROJECT_DIR$/project/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="554" />
     <option name="y" value="20" />
     <option name="width" value="1462" />
@@ -399,15 +399,15 @@
       <workItem from="1543837599234" duration="3563000" />
       <workItem from="1543842629753" duration="1454000" />
       <workItem from="1543847100438" duration="5150000" />
-      <workItem from="1543886549916" duration="69567000" />
+      <workItem from="1543886549916" duration="70192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91103000" />
+    <option name="totallyTimeSpent" value="91728000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1453" height="873" extended-state="6" />
+    <frame x="-6" y="-6" width="1453" height="873" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
@@ -650,7 +650,7 @@
     <entry file="file://$PROJECT_DIR$/project/src/data/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -701,7 +701,7 @@
     <entry file="file://$PROJECT_DIR$/project/src/components/My/SMy.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -715,7 +715,7 @@
     <entry file="file://$PROJECT_DIR$/project/src/data/mongo/router/sendEmail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -745,8 +745,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/src/components/My/MyAddress.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+        <state relative-caret-position="242">
+          <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
