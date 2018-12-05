@@ -34,6 +34,7 @@ class MyAddress extends React.Component {
 
                 <ul className="addr-list">
                     {
+                        if()
                         (()=>{
                             return this.state.addressArr.map((item,index)=>{
                                 return ( <li key={index} >{JSON.parse(item)}
