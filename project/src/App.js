@@ -21,9 +21,7 @@ class App extends Component {
 
       <div className="App">     
           <Route path="/qwe/" component={Sheader} />
-          <Sbanner></Sbanner>
-          <Snav></Snav>
-          <Szhenxuan></Szhenxuan>
+          <Route path="/my/" component={SMy} />
     </div>
     );
   }
