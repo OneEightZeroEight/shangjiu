@@ -11,7 +11,7 @@ import MyAddress from "./MyAddress"
 import AddAddress from "./address/addAddr"
 
 
-import '../../css/my.css';
+import '../../sass/my.scss';
 
 import createHistory from 'history/createBrowserHistory'
 const history = createHistory();

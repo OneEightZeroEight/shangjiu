@@ -4,7 +4,6 @@ import Icon from 'antd/lib/icon';
 import { Input } from 'antd';
 import { Button } from 'antd';
 
-import '../../css/my.css';
 
 
 class Xieyi extends React.Component {
