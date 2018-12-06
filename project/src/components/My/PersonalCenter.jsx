@@ -7,38 +7,62 @@ import '../../sass/my.scss';
 import Icon from 'antd/lib/icon';
 import {Input} from 'antd';
 import {Button, message} from 'antd';
+import Avatar from "./UploadImg";
 
-var randomCode = "";
+var storange = window.localStorage;
 class PersonalCenter extends React.Component {
     constructor(props) {
         super(props)
         this.props = props;
         this.state = {
-            name:""
+            showRedBag:storange.getItem("showRedBag")
         }
     }
     goLogout(){
         this.props.history.push('/my/login/');
     }
+    goUserInfo(){
+        let obj={
+            userName:storange.getItem("user")
+        }
+        this.props.history.push({pathname:"/my/userinfo/",state: obj})
+    }
+    hideRedBag(){
+        this.setState({
+            showRedBag:false
+        })
+        console.log(this.state.showRedBag)
+        storange.setItem("showRedBag","")
+    }
 
     render() {
         return (
             <div style={{overflow: "hidden"}}>
+                {/*红包*/}
+                <div className="redbag bounceOutDown" style={{
+                    display:this.state.showRedBag?"block":"none"
+                }}>
+                    <img src="/imgs/xyhfl.png" alt="" className="animated tada" />
+                    <Icon type="close-circle" onClick={this.hideRedBag.bind(this)} />
+                </div>
+                
                 <div className="top-bar">
-                    <a className="action-back" default-back-url="/">
+                    {/*<a className="action-back" default-back-url="/">*/}
+                    <a className="action-back">
+                        <Avatar />
                         <Icon type="left"/>
                     </a>
                     <b>会员中心</b>
                     <span></span>
                 </div>
                 <div className="container user-index">
-                    <a className="mui-row user-header" href="/user/info">
+                    <a className="mui-row user-header">
                         <div className="mui-col-xs-1"></div>
                         <div className="mui-col-xs-3 mui-text-center user-header-img">
                             <img src="/imgs/user.png" />
                         </div>
                         <div className="mui-col-xs-4 user-firmid">
-                            <Icon type="right" />
+                            <Icon type="right" onClick={this.goUserInfo.bind(this)}/>
                         </div>
                         <div className="mui-col-xs-3"></div>
                         <div className="mui-col-xs-1">
@@ -108,17 +132,20 @@ class PersonalCenter extends React.Component {
                             <span className="mui-icon mui-icon-arrowright mui-pull-right"></span>
                         </a>
                     </div>
-                    <Button block style={{
-                        width:"90%",
-                        margin:"5px auto",
-                        height: "2.8125rem",
-                        background: "#b91c23",
-                        fontSize:"1rem",
-                        color:"#fff",
-                        "fontSize": "0.9rem"
-                    }}
-                    onClick={this.goLogout.bind(this)}
-                    >退出登录</Button>
+                    <div className="signOutBtn">
+                        <Button block style={{
+                            width:"90%",
+                            margin:"5px auto",
+                            height: "2.8125rem",
+                            background: "#b91c23",
+                            fontSize:"1rem",
+                            color:"#fff",
+                            "fontSize": "0.9rem"
+                        }}
+                                onClick={this.goLogout.bind(this)}
+                        >退出登录</Button>
+                    </div>
+
                     <div className="ceng" style={{display: "block",height:"60px"}}></div>
                     <div className="qdbox" style={{display: "none"}}>
                         <div className="qdbox_close">

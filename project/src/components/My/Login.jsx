@@ -10,6 +10,7 @@ import '../../css/my.css';
 import {message} from "antd/lib/index";
 import axios from "axios/index";
 
+var storange = window.localStorage;
 
 class SMy extends React.Component {
     constructor(props) {
@@ -54,6 +55,8 @@ class SMy extends React.Component {
             .then((response) => {
                 if(response.data.err == 0){
                     message.success('登录成功');
+                    storange.setItem("user",this.state.userName)
+                    storange.setItem("showRedBag",true);
                     this.props.history.push('/my/center/');
                 }
 

@@ -12,10 +12,12 @@ const { TextArea } = Input;
 let storange = window.localStorage;
 
 class AddAddress extends React.Component {
+
     constructor(props) {
         super(props)
         this.props = props;
         this.state = {
+            addrObj:"",
             userName: "",
             userPhone:"",
             userProvince:"",
@@ -30,10 +32,27 @@ class AddAddress extends React.Component {
 
     }
 
+
+    getAddrDate(){
+        let obj = this.props.location.state;
+        console.log(this.props.location.state)
+        this.state = {
+            userName: obj.userName,
+            userPhone:obj.userPhone,
+            userProvince:obj.userProvince,
+            userCity:obj.userCity,
+            userAddr:obj.userAddr,
+            userDetailsAddr:obj.userDetailsAddr,
+            showAddrMsgVal:false,
+            addrDefauleBtn:true,
+        }
+
+    }
+
     setDefaultAddr(){
         this.setState({
             addrDefauleBtn:!this.state.addrDefauleBtn
-         })
+        })
     }
     showAddrMsg(){
         this.setState({
@@ -150,8 +169,11 @@ class AddAddress extends React.Component {
 
 
     componentWillMount() {
-        this.getCity()
+        this.getCity();
+        this.getAddrDate();
+
     }
+
 
     render() {
         return (
@@ -168,31 +190,31 @@ class AddAddress extends React.Component {
                     paddingLeft:"30px",
                     textAlign:"left"
                 }}>您当前的定位   <Icon type="environment" theme="filled" />{this.state.currentCity}</div>
-                
+
                 <ul className="add-addr">
                     <li>
                         <label htmlFor="">收货人</label>
-                        <Input onChange={this.inputValue.bind(this)} name="userName" placeholder="请输入收件人姓名" />
+                        <Input onChange={this.inputValue.bind(this)} name="userName" placeholder="请输入收件人姓名"  value={this.state.userName}/>
                     </li>
                     <li>
                         <label htmlFor="">联系电话</label>
-                        <Input onChange={this.inputValue.bind(this)} name="userPhone" placeholder="请输入联系电话" />
+                        <Input onChange={this.inputValue.bind(this)} name="userPhone" placeholder="请输入联系电话"  value={this.state.userPhone}/>
                     </li>
                     <li>
                         <label htmlFor="">所在省份</label>
-                        <Input onChange={this.inputValue.bind(this)} name="userProvince" placeholder="请输入所在省份" value={this.state.showAddrMsgVal?this.state.currentPos.province:this.state.userProvince}/>
+                        <Input onChange={this.inputValue.bind(this)} name="userProvince" placeholder="请输入所在省份" value={this.state.userProvince}/>
                     </li>
                     <li>
                         <label htmlFor="" >所在城市</label>
-                        <Input onChange={this.inputValue.bind(this)} name="userCity" placeholder="请输入所在城市" value={this.state.showAddrMsgVal?this.state.currentPos.city:this.state.userCity}/>
+                        <Input onChange={this.inputValue.bind(this)} name="userCity" placeholder="请输入所在城市" value={this.state.userCity}/>
                     </li>
                     <li>
                         <label htmlFor="">所在地区</label>
-                        <Input onChange={this.inputValue.bind(this)} name="userAddr" placeholder="请输入所在地区" />
+                        <Input onChange={this.inputValue.bind(this)} name="userAddr" placeholder="请输入所在地区"  value={this.state.userAddr}/>
                     </li>
                     <li>
                         <label htmlFor="">详细地址</label>
-                        <TextArea onChange={this.inputValue.bind(this)}  name="userDetailsAddr" rows={4} placeholder="请输入详细地址"/>
+                        <TextArea onChange={this.inputValue.bind(this)}  name="userDetailsAddr" rows={4} value={this.state.userDetailsAddr} placeholder="请输入详细地址"/>
                     </li>
 
                 </ul>

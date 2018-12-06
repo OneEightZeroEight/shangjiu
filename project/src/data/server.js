@@ -1,6 +1,5 @@
 const express = require("express");
 var request = require("request");
-
 const app = express();
 var bodyParser  = require("body-parser");
 const path = require("path");
@@ -14,11 +13,13 @@ app.use(bodyParser.json())
 
 
 
+
 //跨域问题要加上
 app.all("*",function(req,res,next){
     res.header("Access-Control-Allow-Origin","*");
     next();
 })
+
 
 app.get("/getGoods",(req,res)=>{
     // cors
@@ -40,22 +41,11 @@ app.get("/currentPos",(req,res)=>{
         console.log(body);
         res.send(body);
     })
-
-    // request({
-    //         url:"https://sh-trail.ntalker.com/trail/trail/userinfo.php?action=getregion&siteid=kf_10372&userid=kf_10372_ISME9754_guest5B3912A9-8188-7A&callback=trail_getregion_E0D80A48",
-    //         type:'GET',
-    //         dataType:'JSONP',
-    //         success: function(data){
-    //            console.log(666)
-    //         }
-    //     })
-
-
-
 })
 
 
-console.log(__dirname);
+
+// console.log(__dirname);
 //静态资源的引用
 // app.use('/view',express.static(path.join(__dirname,'./view')));
 // app.use('/public',express.static(path.join(__dirname,'./public')));
@@ -63,27 +53,20 @@ console.log(__dirname);
 // 分发路由
 const adminRouter = require('./mongo/router/userAdmin.js');
 app.use("/user",adminRouter);
+const addressRouter = require('./mongo/router/addressAdmin.js');
+app.use("/addr",addressRouter);
+const qgoodRouter = require('./mongo/router/QGoods.js');
+app.use("/qgood",qgoodRouter);
+
+
+
+
 
 
 //生成验证码
 const getCode = require('./mongo/router/setCode.js');
 app.use("/getCode",getCode);
 //验证前端传过来的验证码是否正确
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

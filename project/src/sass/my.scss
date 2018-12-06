@@ -4,6 +4,7 @@ $baseFontSize:16px !default;
   @return $px / $baseFontSize * 1rem;
 }
 html {
+  width: pxToRem(375px);
   font-size: $baseFontSize;
   -ms-touch-action: none;
 }
@@ -174,8 +175,10 @@ ul,li{
     }
   }
 
+
   .my-orders-btns{
     display: flex;
+    width: pxToRem(375px);
     height: pxToRem(90px);
     border-bottom: 1px solid #cccccc;
     padding-top: pxToRem(10px);
@@ -214,10 +217,13 @@ ul,li{
 }
 
 .Shopcar{
+  width: pxToRem(375px);
   margin-top: pxToRem(50px);
   .container{
+    width: pxToRem(375px);
     background: #fff;
     .cart{
+      width: pxToRem(375px);
       .cart-item{
         width: pxToRem(345px);
         margin: 0 auto;
@@ -292,11 +298,13 @@ ul,li{
     }
   }
   .tuijian{
+    width: pxToRem(375px);
     h3{
       height: pxToRem(35px);
       line-height: pxToRem(35px);
     }
     ul{
+      padding-bottom: pxToRem(80px);
       display: flex;
       width: pxToRem(365px);
       margin: 0 auto;
@@ -306,6 +314,9 @@ ul,li{
         background: #fff;
         p{
           margin-bottom: 0px;
+          width: 100%;
+          height: pxToRem(20px);
+          overflow: hidden;
         }
         img{
           width: pxToRem(120px);
@@ -396,6 +407,60 @@ ul,li{
 
 }
 
+.redbag{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.75);
+  z-index: 1000;
+  display: block;
+  img{
+    width: pxToRem(280px);
+    margin: pxToRem(150px) auto;
+  }
+  i{
+    font-size: pxToRem(30px);
+    color: #dddddd;
+    position: fixed;
+    top: pxToRem(120px);
+    right: pxToRem(40px);
+  }
+}
+
+
+
 .setColor{
   color: #b91c23;
+}
+
+.signOutBtn{
+  margin-top: pxToRem(40px);
+  width: pxToRem(375px);
+}
+
+.ant-upload.ant-upload-select-picture-card,ant-upload ant-upload-select ant-upload-select-picture-card{
+  span{
+    padding:0;
+  }
+  border-radius: 50%;
+  width: pxToRem(70px);
+  height: pxToRem(70px);
+  position: absolute;
+  top: pxToRem(66px);
+  left: pxToRem(29px);
+  img{
+
+    border-radius: 50%;
+    width: pxToRem(80px);
+    height: pxToRem(80px);
+  }
+}
+.top-bar{
+  position: absolute;
+}
+.ant-upload.ant-upload-select-picture-card > .ant-upload{
+  position: absolute;
+  padding:0;
 }

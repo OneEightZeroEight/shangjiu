@@ -9,6 +9,9 @@ import { Provider } from 'react-redux';
 // import { createStore } from 'redux'
 // 把上面配置好的store和react进行关
 
+
+import { createStore } from 'redux'
+
 import axios from 'axios';
 import './styles/index.css';
 import './styles/App.css';
@@ -20,9 +23,33 @@ import './sass/shouye.scss';
 import './sass/GoodList.scss';
 import './sass/Detail.scss';
 
-
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
+
+const store = createStore((state = {
+    uname:"",
+    isShowNav: false,
+    isShowGallery: {
+        bool: false,
+        src: ""
+    },
+
+}, action) => {
+    switch (action.type) {
+        case 'toggleNav':
+            return {
+                ...state,
+                isShowNav:action.isShowNav
+            }
+        case 'toggleGallery':
+            return {
+                ...state,
+                isShowGallery:action.isShowGallery
+            }
+        default:
+            return state
+    }
+})
 
 
 React.axios = axios;

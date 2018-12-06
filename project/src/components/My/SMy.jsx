@@ -9,9 +9,11 @@ import PersonCenter from "./PersonalCenter"
 import Shopcar from "./Shopcar"
 import MyAddress from "./MyAddress"
 import AddAddress from "./address/addAddr"
+import EditAddress from "./address/editAddr"
+import UserInfo from "./UserInfo"
 
 
-import '../../css/my.css';
+import '../../sass/my.scss';
 
 import createHistory from 'history/createBrowserHistory'
 const history = createHistory();
@@ -31,6 +33,8 @@ class SMy extends React.Component {
                 <Route path="/my/shopcar/" component={Shopcar} />
                 <Route path="/my/address/" component={MyAddress} />
                 <Route path="/my/addaddress/" component={AddAddress} />
+                <Route path="/my/editaddress/" component={EditAddress} />
+                <Route path="/my/userinfo/" component={UserInfo} />
             </div>
 
         )
