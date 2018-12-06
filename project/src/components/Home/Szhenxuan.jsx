@@ -9,22 +9,22 @@ class Szhenxuan extends React.Component {
             zxlist:[]
         }
     }
-        getIndexInfo(){
-            React.axios.get('./jsons/zhenxuan.json')
-            .then((response)=>{
-                console.log(response.data);
-                this.setState({
-                    zxlist: response.data
-                })
+    getIndexInfo(){
+        React.axios.get('./jsons/zhenxuan.json')
+        .then((response)=>{
+            console.log(response.data);
+            this.setState({
+                zxlist: response.data
             })
-            .catch(function (error) {
-                console.log(error);
-            });
-        }   
-        
-        componentDidMount() {
-            this.getIndexInfo();
-        }
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }   
+    
+    componentDidMount() {
+        this.getIndexInfo();
+    }
     render() {
         return (
         <div>

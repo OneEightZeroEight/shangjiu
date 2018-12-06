@@ -1,0 +1,70 @@
+$baseFontSize:16px !default;
+// pixels to rems
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+
+.header{
+    height: 50px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .home-box{
+        i{
+            font-size: 24px;
+            color: #9a9a9a;
+            line-height: 50px;
+        }
+    }
+    .search-box{
+        width: 72%;
+        height: 40px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 20px;
+        outline: none;
+        input{
+            width: 70%;
+            height: 40px;
+            line-height: 40px;
+        }
+        i{
+            font-size: 24px;
+            color: #9a9a9a;
+            line-height: 40px;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+    }
+    .menu-box{
+        i{
+            font-size: 24px;
+            color: #9a9a9a;
+            line-height: 50px;
+        }
+    }
+}
+
+.filterbar-container{
+    background: #fff;
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    height: 40px;
+    .sort-tab{
+        overflow: hidden;
+        background: #fff;
+        li{
+            position: relative;
+            width: 20%;
+            float: left;
+            height: 39px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 39px;
+        }
+    }
+}
+
