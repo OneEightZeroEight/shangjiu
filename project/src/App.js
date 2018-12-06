@@ -14,8 +14,7 @@ class App extends Component {
     return (
 
       <div className="App">     
-          <Route path="/home/" component={Shouye} />
-     
+          <Route path="/home/" component={Shouye} />  
     </div>
     );
   }
