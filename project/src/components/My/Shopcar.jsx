@@ -15,8 +15,15 @@ class Shopcar extends React.Component {
         super(props)
         this.props = props;
         this.state = {
-            name: ""
+            qxBtn: false
         }
+    }
+
+    quanxuanBtn(){
+        this.setState({
+            qxBtn:!this.state.qxBtn
+        })
+        console.log(this.state.qxBtn)
     }
 
     render() {
@@ -53,7 +60,6 @@ class Shopcar extends React.Component {
                                             <a className="edit-add">+</a>
                                             <Icon type="delete" />
                                         </div>
-
                                     </div>
                                 </div>
                             </li>
@@ -63,6 +69,20 @@ class Shopcar extends React.Component {
 
                 {/*为你推荐*/}
                 <Tuijian />
+
+                <div className="carBottom">
+                    <div onClick={this.quanxuanBtn.bind(this)}>
+                        <span>
+                            <Icon type="check-circle"  theme={this.state.qxBtn?"filled":""} class={this.state.qxBtn?"setColor":""}/>
+                        </span>
+                        <p>全选</p>
+                    </div>
+                    <p>
+                        <span>总计：<b>￥0.00</b></span>
+                        <span>共0件商品</span>
+                    </p>
+                    <button>结&nbsp;&nbsp;算</button>
+                </div>
 
             </div>
 

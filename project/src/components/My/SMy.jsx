@@ -11,6 +11,8 @@ import MyAddress from "./MyAddress"
 import AddAddress from "./address/addAddr"
 import EditAddress from "./address/editAddr"
 import UserInfo from "./UserInfo"
+import Jiesuan from "./jiesuan/Jiesuan"
+import Zhifu from "./jiesuan/Zhifu"
 
 
 import '../../sass/my.scss';
@@ -35,6 +37,8 @@ class SMy extends React.Component {
                 <Route path="/my/addaddress/" component={AddAddress} />
                 <Route path="/my/editaddress/" component={EditAddress} />
                 <Route path="/my/userinfo/" component={UserInfo} />
+                <Route path="/my/jiesuan/" component={Jiesuan} />
+                <Route path="/my/zhifu/" component={Zhifu} />
             </div>
 
         )

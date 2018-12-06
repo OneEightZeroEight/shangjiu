@@ -7,7 +7,7 @@ import '../../sass/my.scss';
 import Icon from 'antd/lib/icon';
 import {Input} from 'antd';
 import {Button, message} from 'antd';
-import Avatar from "./UploadImg";
+// import Avatar from "./UploadImg";
 
 var storange = window.localStorage;
 class PersonalCenter extends React.Component {
@@ -49,7 +49,7 @@ class PersonalCenter extends React.Component {
                 <div className="top-bar">
                     {/*<a className="action-back" default-back-url="/">*/}
                     <a className="action-back">
-                        <Avatar />
+                        {/*<Avatar />*/}
                         <Icon type="left"/>
                     </a>
                     <b>会员中心</b>
