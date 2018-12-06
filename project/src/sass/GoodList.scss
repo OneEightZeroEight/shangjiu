@@ -1,0 +1,163 @@
+$baseFontSize:16px !default;
+// pixels to rems
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+
+.header{
+    height: 50px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .home-box{
+        i{
+            font-size: 24px;
+            color: #9a9a9a;
+            line-height: 50px;
+        }
+    }
+    .search-box{
+        width: 72%;
+        height: 40px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 20px;
+        outline: none;
+        input{
+            width: 70%;
+            height: 40px;
+            line-height: 40px;
+        }
+        i{
+            font-size: 24px;
+            color: #9a9a9a;
+            line-height: 40px;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+    }
+    .menu-box{
+        i{
+            font-size: 24px;
+            color: #9a9a9a;
+            line-height: 50px;
+        }
+    }
+}
+
+.filterbar-container{
+    background: #fff;
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    height: 40px;
+    .sort-tab{
+        overflow: hidden;
+        background: #fff;
+        li{
+            position: relative;
+            width: 20%;
+            float: left;
+            height: 39px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 39px;
+        }
+    }
+}
+
+.list-horizontal{
+    margin: 90px 0 50px 0;
+    overflow: hidden;
+
+    .larger-view{
+        overflow: hidden;
+        border-left: 1px solid #e0e1e1;
+        padding: 0 1px;
+        margin: 0 auto;
+        li{
+            float: left;
+            width: 50%;
+            border-bottom: 1px solid #e0e1e1;
+            border-right: 1px solid #e0e1e1;
+            padding: 12px 0;
+            overflow: hidden;
+            background: #fff;
+            .list-item{
+                display: block;
+               padding: 0 12px;
+               p{
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    margin-left: 0;
+                    overflow: hidden;
+                    text-align: center;
+                    a{
+
+                        line-height: 126px;
+                        border: none;
+                        background: none;
+                        text-align: center;
+                        width: 100%;
+                        padding: 50% 0;
+                        height: 0;
+                        display: inline-block;
+                        position: relative;
+                        img{
+                            width: 161px;
+                            height: 161px;
+                        }
+                    }
+               }
+            }
+            .d{
+                a{
+                    .d-item-name{
+                        color: #333333;
+                        font-size: 14px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 100%;
+                    }
+                    .d-item-name2{
+                        font-size: 12px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 100%;
+                        color: #9a9a9a;
+                        text-align: left;
+                    }
+                    .d-price{
+                        color: #bb0511;
+                        font-size: 16px;
+                        display: inline-block;
+                        margin-right: 5px;
+                        float: left;
+                    }
+                    .d-stock {
+                        color: #666666;
+                        font-size: 12px;
+                        display: inline-block;
+                        vertical-align: bottom;
+                        float: right;
+                    }
+                    .d-num {
+                        span{
+                            color: #999;
+                            font-size: 12px;
+                            line-height: 20px;
+                            margin-top: 8px;
+                            float: right;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from 'antd';
 import { Icon } from "antd";
+import { Link } from "react-router-dom";
 class Bottom extends React.Component {
      constructor(props){
         super(props)
@@ -15,16 +16,16 @@ class Bottom extends React.Component {
             <div className="syBottom clearfix">
                 <ul>
                     <li>
-                        <a>
+                        <Link to='/home/'>
                             <Icon type="home" />
                             <span>首页</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to='/list/'>
                             <Icon type="appstore" />
                             <span>分类</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a>

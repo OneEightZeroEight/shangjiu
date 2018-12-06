@@ -11,15 +11,16 @@ import { Provider } from 'react-redux';
 
 import axios from 'axios';
 import './styles/index.css';
-import './sass/shouye/Sheader.scss';
 import './styles/App.css';
-import './sass/shouye/Sbanner.scss';
-import './sass/shouye/Szhenxuan.scss';
-import './sass/shouye/Snav.scss';
-import './sass/shouye/animate.scss';
-import './sass/shouye/bottom.scss';
 import './styles/base.css';
 import './css/my.css';
+
+
+import './sass/shouye.scss';
+import './sass/GoodList.scss';
+import './sass/Detail.scss';
+
+
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
 

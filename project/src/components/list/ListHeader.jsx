@@ -3,7 +3,7 @@ import {Icon} from "antd";
 class ListHeader extends React.Component {
     render() {
         return (
-            <div className="head-box" style={{ width: "100%", zIndex: "99"}}>
+            <div className="head-box" style={{position: "fixed",top: "0px", left: "0px", width: "100%", zIndex: "99"}}>
                 <div className="header clearfix">
                     <a href="/" className="home-box">
                         <Icon type="home" />

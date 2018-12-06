@@ -13,11 +13,24 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+
 //跨域问题要加上
 app.all("*",function(req,res,next){
     res.header("Access-Control-Allow-Origin","*");
     next();
 })
+
+app.get("/getGoods",(req,res)=>{
+    // cors
+    res.append("Access-Control-Allow-Origin","*");
+    request.post("https://m.winex-hk.com/api/goods/index",(err,response,body)=>{
+        res.header("Access-Control-Allow-Origin","*");
+        console.log(response);
+
+        res.send(body);
+    })
+})
+
 
 app.get("/currentPos",(req,res)=>{
     // cors
@@ -56,6 +69,8 @@ app.use("/user",adminRouter);
 const getCode = require('./mongo/router/setCode.js');
 app.use("/getCode",getCode);
 //验证前端传过来的验证码是否正确
+//
+
 
 
 
