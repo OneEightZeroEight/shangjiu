@@ -8,7 +8,7 @@ import Icon from 'antd/lib/icon';
 import {Input} from 'antd';
 import {Button, message} from 'antd';
 
-var randomCode = "";
+import Tuijian from './common/Tuijian'
 
 class Shopcar extends React.Component {
     constructor(props) {
@@ -62,20 +62,7 @@ class Shopcar extends React.Component {
                 </div>
 
                 {/*为你推荐*/}
-                <div className="tuijian">
-                    <h3>------为您推荐-----</h3>
-                    <ul>
-                        <li>
-                            <img src="/imgs/demoGood.jpg" alt=""/>
-                            <p>321432</p>
-                            <p>3214323243</p>
-                            <p>￥2234</p>
-                        </li>
-
-
-                    </ul>
-
-                </div>
+                <Tuijian />
 
             </div>
 

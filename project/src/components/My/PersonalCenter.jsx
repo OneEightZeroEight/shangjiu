@@ -21,6 +21,12 @@ class PersonalCenter extends React.Component {
     goLogout(){
         this.props.history.push('/my/login/');
     }
+    goUserInfo(){
+        let obj={
+            userName:storange.getItem("user")
+        }
+        this.props.history.push({pathname:"/my/userinfo/",state: obj})
+    }
     hideRedBag(){
         this.setState({
             showRedBag:false
@@ -36,8 +42,8 @@ class PersonalCenter extends React.Component {
                 <div className="redbag bounceOutDown" style={{
                     display:this.state.showRedBag?"block":"none"
                 }}>
-                    <img src="/imgs/xyhfl.png" alt="" className="animated tada"/>
-                    <Icon type="close-circle" onClick={this.hideRedBag.bind(this)}/>
+                    <img src="/imgs/xyhfl.png" alt="" className="animated tada" />
+                    <Icon type="close-circle" onClick={this.hideRedBag.bind(this)} />
                 </div>
                 
                 <div className="top-bar">
@@ -50,13 +56,13 @@ class PersonalCenter extends React.Component {
                     <span></span>
                 </div>
                 <div className="container user-index">
-                    <a className="mui-row user-header" href="/user/info">
+                    <a className="mui-row user-header">
                         <div className="mui-col-xs-1"></div>
                         <div className="mui-col-xs-3 mui-text-center user-header-img">
                             <img src="/imgs/user.png" />
                         </div>
                         <div className="mui-col-xs-4 user-firmid">
-                            <Icon type="right" />
+                            <Icon type="right" onClick={this.goUserInfo.bind(this)}/>
                         </div>
                         <div className="mui-col-xs-3"></div>
                         <div className="mui-col-xs-1">

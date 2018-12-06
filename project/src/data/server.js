@@ -1,6 +1,5 @@
 const express = require("express");
 var request = require("request");
-
 const app = express();
 var bodyParser  = require("body-parser");
 const path = require("path");
@@ -13,13 +12,16 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+
+
+
 //跨域问题要加上
 app.all("*",function(req,res,next){
     res.header("Access-Control-Allow-Origin","*");
     next();
 })
 
-
+//获取城市定位
 app.get("/currentPos",(req,res)=>{
     // cors
     res.append("Access-Control-Allow-Origin","*");
@@ -28,12 +30,8 @@ app.get("/currentPos",(req,res)=>{
         console.log(body);
         res.send(body);
     })
-
-
-
-
-
 })
+
 
 
 // console.log(__dirname);
@@ -46,25 +44,30 @@ const adminRouter = require('./mongo/router/userAdmin.js');
 app.use("/user",adminRouter);
 const addressRouter = require('./mongo/router/addressAdmin.js');
 app.use("/addr",addressRouter);
+const qgoodRouter = require('./mongo/router/QGoods.js');
+app.use("/qgood",qgoodRouter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //生成验证码
 const getCode = require('./mongo/router/setCode.js');
 app.use("/getCode",getCode);
 //验证前端传过来的验证码是否正确
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
