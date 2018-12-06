@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-
-import { Provider } from 'react-redux';
 import { Route} from "react-router-dom";
-import Sheader from './components/Home/Sheader.jsx';
-import Sbanner from './components/Home/Sbanner.jsx';
-import Snav from './components/Home/Snav.jsx';
-import Szhenxuan from './components/Home/Szhenxuan.jsx';
-
+import Shouye from './pages/shouye.jsx';
+import List from './pages/list.jsx';
+import SMy from './components/My/SMy.jsx';
+import Detail from './pages/Detail.jsx';
 
 import Button from 'antd/lib/button';
 
 import './styles/App.css';
 
-
-import SMy from './components/My/SMy.jsx';
-
 class App extends Component {
   render() {
     return (
-      <div className="App">     
-          <Route path="/my/" component={SMy} />
-      </div>
+
+
+      <div className="App">              
+          <Route path="/home/" component={Shouye} />  
+          <Route path="/list/" component={List} />  
+          <Route path="/detail/" component={Detail} />  
+    </div>
+
     );
   }
 }

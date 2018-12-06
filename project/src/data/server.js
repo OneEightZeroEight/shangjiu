@@ -14,14 +14,25 @@ app.use(bodyParser.json())
 
 
 
-
 //跨域问题要加上
 app.all("*",function(req,res,next){
     res.header("Access-Control-Allow-Origin","*");
     next();
 })
 
-//获取城市定位
+
+app.get("/getGoods",(req,res)=>{
+    // cors
+    res.append("Access-Control-Allow-Origin","*");
+    request.post("https://m.winex-hk.com/api/goods/index",(err,response,body)=>{
+        res.header("Access-Control-Allow-Origin","*");
+        console.log(response);
+
+        res.send(body);
+    })
+})
+
+
 app.get("/currentPos",(req,res)=>{
     // cors
     res.append("Access-Control-Allow-Origin","*");
@@ -46,18 +57,6 @@ const addressRouter = require('./mongo/router/addressAdmin.js');
 app.use("/addr",addressRouter);
 const qgoodRouter = require('./mongo/router/QGoods.js');
 app.use("/qgood",qgoodRouter);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

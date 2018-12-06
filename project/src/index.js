@@ -2,17 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // 路由
 import { HashRouter as Router} from "react-router-dom";
+import { Provider } from 'react-redux';
+// 状态管理 配置store的
+// 路由
+// 状态管理 配置store的
+// import { createStore } from 'redux'
+// 把上面配置好的store和react进行关
+
 
 import { createStore } from 'redux'
-import { Provider } from 'react-redux';
 
 import axios from 'axios';
 import './styles/index.css';
 import './styles/App.css';
-import './styles/Sheader.css';
-import './styles/Sbanner.css';
-import './styles/nav.css';
 import './styles/base.css';
+import './css/my.css';
+
+
+import './sass/shouye.scss';
+import './sass/GoodList.scss';
+import './sass/Detail.scss';
+
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
 
