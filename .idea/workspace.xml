@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="057f82d2-65c4-4a97-9190-23410cdd0772" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/My/MyAddress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/My/MyAddress.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/My/Xieyi.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/My/Xieyi.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/sass/my.scss" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/sass/my.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,13 +20,25 @@
     <splitter split-orientation="horizontal" split-proportion="0.839527">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/project/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+                <state relative-caret-position="418">
+                  <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/project/src/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="88">
+                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -76,6 +87,7 @@
       <find>loaders</find>
       <find>css</find>
       <find>onC</find>
+      <find>Provider</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,7 +111,6 @@
         <option value="$PROJECT_DIR$/project/src/sass/test.sass" />
         <option value="$PROJECT_DIR$/project/package.json" />
         <option value="$PROJECT_DIR$/project/src/css/my.css" />
-        <option value="$PROJECT_DIR$/project/src/index.js" />
         <option value="$PROJECT_DIR$/project/src/data/mongo/mongoose.js" />
         <option value="$PROJECT_DIR$/project/src/libs/restDemo_nodejs/bin/www" />
         <option value="$PROJECT_DIR$/project/src/css/q_animate.css" />
@@ -113,12 +124,13 @@
         <option value="$PROJECT_DIR$/project/src/data/server.js" />
         <option value="$PROJECT_DIR$/project/public/index.html" />
         <option value="$PROJECT_DIR$/project/src/components/My/address/addAddr.jsx" />
-        <option value="$PROJECT_DIR$/project/src/App.js" />
         <option value="$PROJECT_DIR$/project/src/components/My/SMy.jsx" />
         <option value="$PROJECT_DIR$/project/src/sass/my.scss" />
         <option value="$PROJECT_DIR$/project/src/components/My/PersonalCenter.jsx" />
         <option value="$PROJECT_DIR$/project/src/components/My/MyAddress.jsx" />
         <option value="$PROJECT_DIR$/project/src/components/My/Xieyi.jsx" />
+        <option value="$PROJECT_DIR$/project/src/App.js" />
+        <option value="$PROJECT_DIR$/project/src/index.js" />
       </list>
     </option>
   </component>
@@ -192,6 +204,13 @@
               <item name="shangjiu" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shangjiu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shangjiu" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,6 +219,13 @@
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shangjiu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shangjiu" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -275,26 +301,25 @@
       <workItem from="1543837599234" duration="3563000" />
       <workItem from="1543842629753" duration="1454000" />
       <workItem from="1543847100438" duration="5150000" />
-      <workItem from="1543886549916" duration="74553000" />
+      <workItem from="1543886549916" duration="77764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96089000" />
+    <option name="totallyTimeSpent" value="99300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1453" height="873" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1772064" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22446144" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.47949964" side_tool="true" visible="true" weight="0.077529564" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.45865184" side_tool="true" weight="0.39027596" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.52050036" visible="true" weight="0.077529564" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.52050036" weight="0.31274638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.5420431" weight="0.39027596" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.54134816" visible="true" weight="0.116951376" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -546,13 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/sass/my.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/components/My/MyAddress.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -608,16 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/components/My/Xieyi.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -628,12 +636,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/sass/my.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        <state relative-caret-position="418">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
