@@ -19,6 +19,7 @@ app.all("*",function(req,res,next){
     next();
 })
 
+
 app.get("/currentPos",(req,res)=>{
     // cors
     res.append("Access-Control-Allow-Origin","*");
@@ -28,21 +29,14 @@ app.get("/currentPos",(req,res)=>{
         res.send(body);
     })
 
-    // request({
-    //         url:"https://sh-trail.ntalker.com/trail/trail/userinfo.php?action=getregion&siteid=kf_10372&userid=kf_10372_ISME9754_guest5B3912A9-8188-7A&callback=trail_getregion_E0D80A48",
-    //         type:'GET',
-    //         dataType:'JSONP',
-    //         success: function(data){
-    //            console.log(666)
-    //         }
-    //     })
+
 
 
 
 })
 
 
-console.log(__dirname);
+// console.log(__dirname);
 //静态资源的引用
 // app.use('/view',express.static(path.join(__dirname,'./view')));
 // app.use('/public',express.static(path.join(__dirname,'./public')));
@@ -50,6 +44,8 @@ console.log(__dirname);
 // 分发路由
 const adminRouter = require('./mongo/router/userAdmin.js');
 app.use("/user",adminRouter);
+const addressRouter = require('./mongo/router/addressAdmin.js');
+app.use("/addr",addressRouter);
 
 
 //生成验证码

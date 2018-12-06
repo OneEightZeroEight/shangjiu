@@ -59,7 +59,7 @@ Router.post("/addUserInfo",(req,res)=>{
         })
         .catch((err)=>{
             console.log(err);
-            res.send({err:0,msg:'addError',data:null})
+            res.send({err:-1,msg:'addError',data:null})
         })
 });
 

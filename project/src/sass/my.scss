@@ -175,8 +175,10 @@ ul,li{
     }
   }
 
+
   .my-orders-btns{
     display: flex;
+    width: pxToRem(375px);
     height: pxToRem(90px);
     border-bottom: 1px solid #cccccc;
     padding-top: pxToRem(10px);
@@ -397,6 +399,60 @@ ul,li{
 
 }
 
+.redbag{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.75);
+  z-index: 1000;
+  display: block;
+  img{
+    width: pxToRem(280px);
+    margin: pxToRem(150px) auto;
+  }
+  i{
+    font-size: pxToRem(30px);
+    color: #dddddd;
+    position: fixed;
+    top: pxToRem(120px);
+    right: pxToRem(40px);
+  }
+}
+
+
+
 .setColor{
   color: #b91c23;
+}
+
+.signOutBtn{
+  margin-top: pxToRem(40px);
+  width: pxToRem(375px);
+}
+
+.ant-upload.ant-upload-select-picture-card,ant-upload ant-upload-select ant-upload-select-picture-card{
+  span{
+    padding:0;
+  }
+  border-radius: 50%;
+  width: pxToRem(70px);
+  height: pxToRem(70px);
+  position: absolute;
+  top: pxToRem(66px);
+  left: pxToRem(29px);
+  img{
+
+    border-radius: 50%;
+    width: pxToRem(80px);
+    height: pxToRem(80px);
+  }
+}
+.top-bar{
+  position: absolute;
+}
+.ant-upload.ant-upload-select-picture-card > .ant-upload{
+  position: absolute;
+  padding:0;
 }

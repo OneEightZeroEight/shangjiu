@@ -7,25 +7,43 @@ import '../../sass/my.scss';
 import Icon from 'antd/lib/icon';
 import {Input} from 'antd';
 import {Button, message} from 'antd';
+import Avatar from "./UploadImg";
 
-var randomCode = "";
+var storange = window.localStorage;
 class PersonalCenter extends React.Component {
     constructor(props) {
         super(props)
         this.props = props;
         this.state = {
-            name:""
+            showRedBag:storange.getItem("showRedBag")
         }
     }
     goLogout(){
         this.props.history.push('/my/login/');
     }
+    hideRedBag(){
+        this.setState({
+            showRedBag:false
+        })
+        console.log(this.state.showRedBag)
+        storange.setItem("showRedBag","")
+    }
 
     render() {
         return (
             <div style={{overflow: "hidden"}}>
+                {/*红包*/}
+                <div className="redbag bounceOutDown" style={{
+                    display:this.state.showRedBag?"block":"none"
+                }}>
+                    <img src="/imgs/xyhfl.png" alt="" className="animated tada"/>
+                    <Icon type="close-circle" onClick={this.hideRedBag.bind(this)}/>
+                </div>
+                
                 <div className="top-bar">
-                    <a className="action-back" default-back-url="/">
+                    {/*<a className="action-back" default-back-url="/">*/}
+                    <a className="action-back">
+                        <Avatar />
                         <Icon type="left"/>
                     </a>
                     <b>会员中心</b>
@@ -108,17 +126,20 @@ class PersonalCenter extends React.Component {
                             <span className="mui-icon mui-icon-arrowright mui-pull-right"></span>
                         </a>
                     </div>
-                    <Button block style={{
-                        width:"90%",
-                        margin:"5px auto",
-                        height: "2.8125rem",
-                        background: "#b91c23",
-                        fontSize:"1rem",
-                        color:"#fff",
-                        "fontSize": "0.9rem"
-                    }}
-                    onClick={this.goLogout.bind(this)}
-                    >退出登录</Button>
+                    <div className="signOutBtn">
+                        <Button block style={{
+                            width:"90%",
+                            margin:"5px auto",
+                            height: "2.8125rem",
+                            background: "#b91c23",
+                            fontSize:"1rem",
+                            color:"#fff",
+                            "fontSize": "0.9rem"
+                        }}
+                                onClick={this.goLogout.bind(this)}
+                        >退出登录</Button>
+                    </div>
+
                     <div className="ceng" style={{display: "block",height:"60px"}}></div>
                     <div className="qdbox" style={{display: "none"}}>
                         <div className="qdbox_close">

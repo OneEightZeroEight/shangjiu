@@ -9,6 +9,7 @@ import PersonCenter from "./PersonalCenter"
 import Shopcar from "./Shopcar"
 import MyAddress from "./MyAddress"
 import AddAddress from "./address/addAddr"
+import EditAddress from "./address/editAddr"
 
 
 import '../../sass/my.scss';
@@ -31,6 +32,7 @@ class SMy extends React.Component {
                 <Route path="/my/shopcar/" component={Shopcar} />
                 <Route path="/my/address/" component={MyAddress} />
                 <Route path="/my/addaddress/" component={AddAddress} />
+                <Route path="/my/editaddress/" component={EditAddress} />
             </div>
 
         )
