@@ -21,12 +21,6 @@ class Szhenxuan extends React.Component {
             console.log(error);
         });
     }   
-    setGoods(id){
-        var storage = window.localStorage;
-        storage.setItem("goodId",id);
-        this.props.history.push("/detail/");    
-    } 
-    
     componentDidMount() {
         this.getIndexInfo();
     }
@@ -102,7 +96,7 @@ class Szhenxuan extends React.Component {
                     {
                         (()=>{
                             return this.state.zxlist.map((item,index)=>{
-                                return  (<a className="list-content-item" href="javascript:;"  key={index} onClick={this.setGoods.bind(this,item.Id)}>
+                                return  (<a className="list-content-item" href="javascript:;"  key={index}>
                                         <img className="lazy"  alt="" src={item.url} />
                                         <p className="msg" style={{color:"#565656"}}>{item.name}</p>
                                         <p className="msg" style={{fontSize:"12px"}}>CLOS RENE 2014</p>

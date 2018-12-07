@@ -27,7 +27,7 @@ class Index extends Component {
                 <Sheader></Sheader>
                 <Sbanner></Sbanner>
                 <Snav></Snav>
-                <Szhenxuan></Szhenxuan>
+                <Szhenxuan history={this.props.history}></Szhenxuan>
                 <Bottom history={this.props.history}></Bottom>
                 <div>
                     <BackTop />

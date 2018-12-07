@@ -9,7 +9,7 @@ class Detail extends Component {
     render() {
         return (
             <div>
-                <Dheader></Dheader>
+                <Dheader history={this.props.history}></Dheader>
                 <Dcontent></Dcontent>    
             </div>
         );
