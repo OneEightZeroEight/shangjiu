@@ -23,10 +23,31 @@ app.all("*",function(req,res,next){
 
 app.get("/getGoods",(req,res)=>{
     // cors
+    console.log(req.query)
     res.append("Access-Control-Allow-Origin","*");
-    request.post("https://m.winex-hk.com/api/goods/index",(err,response,body)=>{
+    request.post("https://m.winex-hk.com/api/goods/index",
+        {
+            page: 1,
+            pageSize: 20,
+            getProps: 1,
+            categoryId: 0,
+            brandId: 0,
+            countryId: 0,
+            yearRange: 0,
+            rankId: 0,
+            areaId: 0,
+            legalId: 0,
+            minPrice: 0,
+            maxPrice: 0,
+            keyword: "",
+            sort: "date",
+            direct: "asc",
+            goodsType: 0
+
+        },(err,response,body)=>{
         res.header("Access-Control-Allow-Origin","*");
-        console.log(response);
+       
+       console.log(body)
 
         res.send(body);
     })

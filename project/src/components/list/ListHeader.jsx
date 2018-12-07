@@ -1,6 +1,34 @@
 import React from "react";
 import {Icon} from "antd";
 class ListHeader extends React.Component {
+    constructor(props){
+        super(props);
+        this.props = props;
+        this.state = {
+            nav:0,
+            navlist:[{
+                title:'综合'
+            },{
+                title:'销量'
+            },{
+                title:'价格'
+            },{
+                title:'新品'
+            },{
+                title:'筛选'
+            },]
+        }
+    }
+    navigateTo(index, e) {
+        this.setState({
+            nav: index
+        })
+        var storage = window.localStorage;
+        storage.setItem("Index",index);
+        console.log(index)
+    }
+
+
     render() {
         return (
             <div className="head-box" style={{position: "fixed",top: "0px", left: "0px", width: "100%", zIndex: "99"}}>
@@ -11,7 +39,7 @@ class ListHeader extends React.Component {
                     <div className="search-box">
                         <form id="search-form" action="/goods" method="get" style={{border: "none"}}>
                             <input type="text" id="keyword" name="keyword" placeholder="拉图嘉利城堡副牌干红葡萄酒2014" /> 
-                            <a href="javascript:" onclick="$('#search-form').submit();">
+                            <a href="javascript:" >
                                 <Icon type="search" />
                             </a>
                         </form>
@@ -22,19 +50,17 @@ class ListHeader extends React.Component {
                 </div> 
                 <div className="filterbar-container">
                     <ul className="sort-tab clearfix">
-                        <li className="current">
-                            综合
-                        </li> 
-                        <li className="">
-                            <span>销量</span>
-                        </li> 
-                        <li className="">
-                            <span>价格</span>
-                        </li>
-                        <li className="">
-                            新品
-                        </li> 
-                        <li>筛选</li>
+                    {
+                        (()=>{
+                            return this.state.navlist.map((item,index)=>{
+                                return <li onClick={this.navigateTo.bind(this,index)}
+                                           key={index}
+                                           className={index === this.state.nav ? "current" : ""}
+                                        >{item.title}</li>  
+                            })
+                        })()
+                    }
+                        
                     </ul>
                 </div>
             </div>

@@ -10,7 +10,7 @@ class List extends Component {
         return (
             <div>
                 <ListHeader></ListHeader>
-                <GoodList></GoodList>
+                <GoodList history={this.props.history}></GoodList>
                 <Bottom></Bottom>
                 <div>
                     <BackTop />

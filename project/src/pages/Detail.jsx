@@ -9,9 +9,8 @@ class Detail extends Component {
     render() {
         return (
             <div>
-                <Dheader></Dheader>
-                <Dcontent></Dcontent>
-                
+                <Dheader history={this.props.history}></Dheader>
+                <Dcontent></Dcontent>    
             </div>
         );
     }

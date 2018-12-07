@@ -27,6 +27,7 @@ class Szhenxuan extends React.Component {
             });
     }
 
+
     componentDidMount() {
         this.getIndexInfo();
 
@@ -46,32 +47,27 @@ class Szhenxuan extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="publicBox" style={{paddingRight: "0"}}>
-                    <div className="publicTle clearfix" style={{paddingRight: "0.625rem"}}>
-                        <p>跨境甄选</p>
-                        <a href="/goods_o257" className="m_gd">
-                            <span>更多</span>
-                            <Icon type="right"/>
-                        </a>
-                    </div>
-                    <div className="swiper-container " >
-                    {
-                        (() => {
 
-                            return this.state.zxlist.map((item, index) => {
-                                if(index == 5){return ;}
-                                return (
-                                    <div key={index} className="swiper-wrapper" style={{transform: "translate3d(0px, 0px, 0px)"}}
-                                         style={{
-                                             width: "33%",
-                                             float: "left"
-                                         }}>
-                                        <div className="zhenX swiper-slide swiper-slide-active"
-                                             style={{width: "115px", marginRight: "10px"}}>
-                                            <a className="list-content-item" href={item.href}
-                                               style={{width: "100%", border: "0"}}>
-                                                <img src={item.url} alt="蓓姬城堡副牌干红葡萄酒2012"/>
+        <div>
+            <div className="publicBox" style={{paddingRight:"0"}}>
+                <div className="publicTle clearfix" style={{paddingRight:"0.625rem"}}>
+                    <p>跨境甄选</p>
+                    <a href="/goods_o257" className="m_gd">
+                        <span>更多</span>
+                        <Icon type="right" />
+                    </a>
+                </div>
+                {
+                    (()=>{
+                        return this.state.zxlist.map((item,index)=>{
+                            return  (<div className="swiper-container " key={index}>
+                                    <div className="swiper-wrapper" style={{transform: "translate3d(0px, 0px, 0px)"}} style={{
+                                        width:"33%",
+                                        float:"left"
+                                    }}>
+                                        <div className="zhenX swiper-slide swiper-slide-active" style={{width: "115px", marginRight: "10px"}}>
+                                            <a className="list-content-item" href={item.href} style={{width:"100%",border:"0"}}>
+                                                <img src={item.url} alt="蓓姬城堡副牌干红葡萄酒2012" />
                                                 <p className="slide_text">{item.name}</p>
                                                 <p className="text-price">
                                                     ￥{item.price}
@@ -79,12 +75,17 @@ class Szhenxuan extends React.Component {
                                             </a>
                                         </div>
                                     </div>
-                                    // <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                                )
-                            })
-                        })()
-                    }</div>
-                </div>
+                                    <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                </div>
+                            )
+                        })
+                    })()     
+                }  
+            </div>
+
+            <div className="xiaotu">
+                <img src="./20180930112726_9743.jpg" alt="tp" />
+            </div>
 
                 <div className="xiaotu">
                     <img src="./20180930112726_9743.jpg" alt="tp"/>
@@ -112,33 +113,23 @@ class Szhenxuan extends React.Component {
                     </a>
                 </div>
 
-                <div className="publicBox">
-                    <div className="publicTle clearfix">
-                        <p>精选口粮</p>
-                        <a href="/goods_o268" className="m_gd">
-                            <span>更多</span>
-                            <Icon type="right"/>
-                        </a>
-                    </div>
-                    <div className="list-content clearfix">
-                        {
-                            (() => {
-                                return this.state.zxlist.map((item, index) => {
-                                    return <a className="list-content-item" href={item.href} key={index}>
-                                        <img className="lazy"
-                                             data-original="/upload/thumb_220x220/20180918/20180918110347_5856.jpg"
-                                             alt="" src={item.url}/>
-                                        <p className="msg" style={{color: "#565656"}}>{item.name}</p>
-                                        <p className="msg" style={{fontSize: "12px"}}>CLOS RENE 2014</p>
-                                        <p className="msg" style={{fontSize: "12px"}}>{item.address}</p>
-                                        <p className="text-price" style={{color: "red", fontSize: "16px"}}>
+                <div className="list-content clearfix">
+                    {
+                        (()=>{
+                            return this.state.zxlist.map((item,index)=>{
+                                return  (<a className="list-content-item" href="javascript:;"  key={index}>
+                                        <img className="lazy"  alt="" src={item.url} />
+                                        <p className="msg" style={{color:"#565656"}}>{item.name}</p>
+                                        <p className="msg" style={{fontSize:"12px"}}>CLOS RENE 2014</p>
+                                        <p className="msg" style={{fontSize:"12px"}}>{item.address}</p>
+                                        <p className="text-price" style={{color:"red",fontSize:"16px"}}>
                                             ￥{item.price}
                                         </p>
-                                    </a>
-                                });
-                            })()
-                        }
-                    </div>
+                                    </a> )    
+                            });
+                        })()
+                    }
+                </div>
 
                 </div>
 
