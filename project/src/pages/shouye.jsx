@@ -7,8 +7,20 @@ import Szhenxuan from '../components/Home/Szhenxuan.jsx';
 import Bottom from '../components/common/bottom.jsx';
 import { BackTop } from 'antd';
 
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+const location = history.location;
+
 
 class Index extends Component {
+
+    constructor(props){
+        super(props)
+        this.props = props;
+        this.state = {
+            name:""
+        }}
+
     render() {
         return (
             <div>
@@ -16,7 +28,7 @@ class Index extends Component {
                 <Sbanner></Sbanner>
                 <Snav></Snav>
                 <Szhenxuan></Szhenxuan>
-                <Bottom></Bottom>   
+                <Bottom history={this.props.history}></Bottom>
                 <div>
                     <BackTop />
                     Scroll down to see the bottom-right

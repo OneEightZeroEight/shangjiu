@@ -48,7 +48,7 @@ class PersonalCenter extends React.Component {
                 
                 <div className="top-bar">
                     {/*<a className="action-back" default-back-url="/">*/}
-                    <a className="action-back">
+                    <a className="action-back" href="/">
                         {/*<Avatar />*/}
                         <Icon type="left"/>
                     </a>
@@ -101,7 +101,8 @@ class PersonalCenter extends React.Component {
                             红酒豆来袭~
                             <span className="mui-icon mui-icon-arrowright mui-pull-right"></span>
                         </a>
-                        <a href="/user/info">
+                        <a onClick={this.goUserInfo.bind(this)}>
+
                             <Icon type="user" />
                             个人信息
                             <span className="mui-icon mui-icon-arrowright mui-pull-right"></span>

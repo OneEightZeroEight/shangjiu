@@ -25,6 +25,9 @@ import './sass/Detail.scss';
 
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+const location = history.location;
 
 const store = createStore((state = {
     uname:"",

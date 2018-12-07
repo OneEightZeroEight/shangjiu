@@ -39,8 +39,11 @@ class Szhenxuan extends React.Component {
                 {
                     (()=>{
                         return this.state.zxlist.map((item,index)=>{
-                            return  <div className="swiper-container ">
-                                    <div className="swiper-wrapper" style={{transform: "translate3d(0px, 0px, 0px)"}}>
+                            return  <div className="swiper-container " key={index}>
+                                    <div className="swiper-wrapper" style={{transform: "translate3d(0px, 0px, 0px)"}} style={{
+                                        width:"33%",
+                                        float:"left"
+                                    }}>
                                         <div className="zhenX swiper-slide swiper-slide-active" style={{width: "115px", marginRight: "10px"}}>
                                             <a className="list-content-item" href={item.href} style={{width:"100%",border:"0"}}>
                                                 <img src={item.url} alt="蓓姬城堡副牌干红葡萄酒2012" />
@@ -93,7 +96,7 @@ class Szhenxuan extends React.Component {
                     {
                         (()=>{
                             return this.state.zxlist.map((item,index)=>{
-                                return  <a className="list-content-item" href={item.href }>
+                                return  <a className="list-content-item" href={item.href }  key={index}>
                                         <img className="lazy" data-original="/upload/thumb_220x220/20180918/20180918110347_5856.jpg" alt="" src={item.url} />
                                         <p className="msg" style={{color:"#565656"}}>{item.name}</p>
                                         <p className="msg" style={{fontSize:"12px"}}>CLOS RENE 2014</p>

@@ -18,6 +18,9 @@ class Shopcar extends React.Component {
             qxBtn: false
         }
     }
+    goBack(){
+        this.props.history.goBack();
+    }
 
     quanxuanBtn(){
         this.setState({
@@ -30,7 +33,7 @@ class Shopcar extends React.Component {
         return (
             <div style={{overflow: "hidden"}} className="Shopcar">
                 <div className="top-bar">
-                    <a className="action-back" default-back-url="/">
+                    <a onClick={this.goBack.bind(this)} className="action-back" default-back-url="/">
                         <Icon type="left"/>
                     </a>
                     <b>我的购物车（<span>0</span>）</b>
@@ -73,7 +76,7 @@ class Shopcar extends React.Component {
                 <div className="carBottom">
                     <div onClick={this.quanxuanBtn.bind(this)}>
                         <span>
-                            <Icon type="check-circle"  theme={this.state.qxBtn?"filled":""} class={this.state.qxBtn?"setColor":""}/>
+                            <Icon type="check-circle"  theme={this.state.qxBtn?"filled":""} className={this.state.qxBtn?"setColor":""}/>
                         </span>
                         <p>全选</p>
                     </div>

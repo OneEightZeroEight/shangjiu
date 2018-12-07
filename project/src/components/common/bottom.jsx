@@ -1,7 +1,16 @@
 import React from "react";
 import { Carousel } from 'antd';
 import { Icon } from "antd";
+import {message} from "antd/lib/index";
+
 import { Link } from "react-router-dom";
+
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+const location = history.location;
+
+
+let storage = window.localStorage;
 class Bottom extends React.Component {
      constructor(props){
         super(props)
@@ -9,7 +18,17 @@ class Bottom extends React.Component {
         this.state = {
             navlist:[]
     }}
-   
+
+    goPersonCenter(){
+         console.log("wode")
+         if(storage.getItem("user")){
+             this.props.history.push("/my/center/")
+         }else {
+             message.warning('您还未登录');
+             this.props.history.push("/my/login/")
+
+         }
+    }
 
     render() {
         return (
@@ -33,13 +52,13 @@ class Bottom extends React.Component {
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="/#/my/shopcar">
                             <Icon type="shopping-cart" />
                             <span>购物车</span>
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a onClick={this.goPersonCenter.bind(this)}>
                             <Icon type="user" />
                             <span>我的</span>
                         </a>

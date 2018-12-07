@@ -64,6 +64,3 @@ export default SMy;
 //     }
 // }))(Wgallery);
 
-
-
-        //     <a className="text-go" href="javascript:location.href='/user/register'+getUrlParams()">立即注册</a>
