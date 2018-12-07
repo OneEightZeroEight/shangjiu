@@ -1,7 +1,7 @@
 html {
+  width: 23.4375rem;
   font-size: 16px;
-  -ms-touch-action: none;
-  background: #f3f3f5; }
+  -ms-touch-action: none; }
 
 html, body {
   width: 100%;
@@ -147,6 +147,7 @@ ul, li {
 
 .my-orders .my-orders-btns {
   display: flex;
+  width: 23.4375rem;
   height: 5.625rem;
   border-bottom: 1px solid #cccccc;
   padding-top: 0.625rem; }
@@ -174,72 +175,120 @@ ul, li {
       margin-right: 7px; }
 
 .Shopcar {
-  background: #f3f3f5;
+  width: 23.4375rem;
   margin-top: 3.125rem; }
+  .Shopcar .carBottom {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    border-top: 1px solid #cccccc;
+    width: 23.4375rem;
+    display: flex; }
+    .Shopcar .carBottom > div {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      padding-left: 1.875rem;
+      text-align: left;
+      font-size: 1.125rem; }
+      .Shopcar .carBottom > div span {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 3px; }
+        .Shopcar .carBottom > div span i {
+          font-size: 1.625rem; }
+    .Shopcar .carBottom > p {
+      width: 30%;
+      line-height: 1.5rem;
+      display: flex;
+      flex-direction: column; }
+      .Shopcar .carBottom > p span b {
+        color: #aa1f24;
+        font-size: 1.125rem; }
+    .Shopcar .carBottom > button {
+      background: #aa1f24;
+      flex: 1;
+      height: 3.125rem;
+      font-size: 1.125rem;
+      color: #ffffff;
+      font-weight: bold; }
   .Shopcar .container {
+    width: 23.4375rem;
     background: #fff; }
-    .Shopcar .container .cart .cart-item {
-      width: 21.5625rem;
-      margin: 0 auto; }
-      .Shopcar .container .cart .cart-item li {
-        display: flex;
-        height: 8.8125rem;
-        line-height: 7.5625rem;
-        border-bottom: 1px solid #cccccc; }
-        .Shopcar .container .cart .cart-item li .left {
-          font-size: 1.25rem;
-          width: 5%;
-          margin: 0 0.625rem; }
-        .Shopcar .container .cart .cart-item li .middle a {
-          display: block;
-          width: 6.25rem; }
-          .Shopcar .container .cart .cart-item li .middle a img {
-            width: 100%;
-            border: 1px solid #cccccc;
-            height: 100%; }
-        .Shopcar .container .cart .cart-item li .right {
-          padding-left: 1.25rem;
-          text-align: left;
-          box-sizing: border-box;
-          padding-top: 10px;
-          line-height: 0.75rem; }
-          .Shopcar .container .cart .cart-item li .right div .text-price {
-            color: #b91c23;
-            font-size: 0.875rem; }
-          .Shopcar .container .cart .cart-item li .right .edit-box div i {
-            float: right;
-            font-size: 20px; }
-          .Shopcar .container .cart .cart-item li .right .edit-box div p {
-            margin-bottom: 4px; }
-          .Shopcar .container .cart .cart-item li .right .edit-box div a {
-            float: left;
-            display: inline-block;
-            text-align: center;
-            line-height: 1.5625rem;
-            width: 1.5625rem;
-            height: 1.5625rem;
-            border: 1px solid #cccccc; }
-          .Shopcar .container .cart .cart-item li .right .edit-box div input {
-            float: left;
-            width: 2.5rem;
-            height: 1.5625rem;
-            border: 1px solid #cccccc; }
-  .Shopcar .tuijian h3 {
-    height: 2.1875rem;
-    line-height: 2.1875rem; }
-  .Shopcar .tuijian ul {
-    display: flex;
-    width: 22.8125rem;
-    margin: 0 auto;
-    flex-wrap: wrap; }
-    .Shopcar .tuijian ul li {
-      width: 33%;
-      background: #fff; }
-      .Shopcar .tuijian ul li p {
-        margin-bottom: 0px; }
-      .Shopcar .tuijian ul li img {
-        width: 7.5rem;
-        height: 7.5rem; }
+    .Shopcar .container .cart {
+      width: 23.4375rem; }
+      .Shopcar .container .cart .cart-item {
+        width: 21.5625rem;
+        margin: 0 auto; }
+        .Shopcar .container .cart .cart-item li {
+          display: flex;
+          height: 8.8125rem;
+          line-height: 7.5625rem;
+          border-bottom: 1px solid #cccccc; }
+          .Shopcar .container .cart .cart-item li .left {
+            font-size: 1.25rem;
+            width: 5%;
+            margin: 0 0.625rem; }
+          .Shopcar .container .cart .cart-item li .middle a {
+            display: block;
+            width: 6.25rem; }
+            .Shopcar .container .cart .cart-item li .middle a img {
+              width: 100%;
+              border: 1px solid #cccccc;
+              height: 100%; }
+          .Shopcar .container .cart .cart-item li .right {
+            padding-left: 1.25rem;
+            text-align: left;
+            box-sizing: border-box;
+            padding-top: 10px;
+            line-height: 1.5rem; }
+            .Shopcar .container .cart .cart-item li .right div .text-price {
+              color: #b91c23;
+              font-size: 0.875rem; }
+            .Shopcar .container .cart .cart-item li .right .edit-box div i {
+              float: right;
+              font-size: 20px; }
+            .Shopcar .container .cart .cart-item li .right .edit-box div p {
+              margin-bottom: 4px; }
+            .Shopcar .container .cart .cart-item li .right .edit-box div a {
+              float: left;
+              display: inline-block;
+              text-align: center;
+              line-height: 1.5625rem;
+              width: 1.5625rem;
+              height: 1.5625rem;
+              border: 1px solid #cccccc; }
+            .Shopcar .container .cart .cart-item li .right .edit-box div input {
+              float: left;
+              width: 2.5rem;
+              height: 1.5625rem;
+              border: 1px solid #cccccc; }
+  .Shopcar .tuijian {
+    width: 23.4375rem; }
+    .Shopcar .tuijian h3 {
+      height: 2.1875rem;
+      line-height: 2.1875rem; }
+    .Shopcar .tuijian ul {
+      padding-bottom: 5rem;
+      display: flex;
+      width: 22.8125rem;
+      margin: 0 auto;
+      flex-wrap: wrap; }
+      .Shopcar .tuijian ul li {
+        width: 33%;
+        background: #fff; }
+        .Shopcar .tuijian ul li p {
+          margin-bottom: 0px;
+          width: 100%;
+          height: 1.25rem;
+          overflow: hidden; }
+        .Shopcar .tuijian ul li img {
+          width: 7.5rem;
+          height: 7.5rem; }
 
 .newAddrBtn {
   width: 23.4375rem;
@@ -267,3 +316,209 @@ ul, li {
   .add-addr li textarea {
     flex: 1; }
 
+.defaultArr {
+  box-sizing: border-box;
+  border-top: 0.625rem solid #f7f5f5;
+  border-bottom: 10px solid #f7f5f5;
+  font-size: 1rem;
+  overflow: hidden; }
+  .defaultArr span {
+    float: left;
+    margin: 0.625rem; }
+  .defaultArr i {
+    font-size: 1.125rem;
+    float: right;
+    margin: 0.625rem; }
+
+.addr-list {
+  background: #fff;
+  text-align: left; }
+  .addr-list li {
+    width: 22.1875rem;
+    padding-left: 20px;
+    margin: 0 auto; }
+    .addr-list li .addr-edit {
+      padding: 0.9375rem;
+      font-size: 16px; }
+      .addr-list li .addr-edit a {
+        float: right;
+        margin-right: 0.625rem;
+        color: #3e3e3e; }
+      .addr-list li .addr-edit i {
+        margin-right: 10px; }
+
+.redbag {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  display: block; }
+  .redbag img {
+    width: 17.5rem;
+    margin: 9.375rem auto; }
+  .redbag i {
+    font-size: 1.875rem;
+    color: #dddddd;
+    position: fixed;
+    top: 7.5rem;
+    right: 2.5rem; }
+
+.setColor {
+  color: #b91c23; }
+
+.signOutBtn {
+  margin-top: 2.5rem;
+  width: 23.4375rem; }
+
+.ant-upload.ant-upload-select-picture-card, ant-upload ant-upload-select ant-upload-select-picture-card {
+  border-radius: 50%;
+  width: 4.375rem;
+  height: 4.375rem;
+  position: absolute;
+  top: 4.125rem;
+  left: 1.8125rem; }
+  .ant-upload.ant-upload-select-picture-card span, ant-upload ant-upload-select ant-upload-select-picture-card span {
+    padding: 0; }
+  .ant-upload.ant-upload-select-picture-card img, ant-upload ant-upload-select ant-upload-select-picture-card img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem; }
+
+.ant-upload.ant-upload-select-picture-card > .ant-upload {
+  position: absolute;
+  padding: 0; }
+
+.Jiesuan {
+  background: #f6f3f3;
+  margin-top: 2.8125rem; }
+  .Jiesuan .addr {
+    background: #fff;
+    width: 23.4375rem;
+    height: 4.75rem; }
+    .Jiesuan .addr p {
+      padding: 0.3125rem 1.875rem;
+      line-height: 1.875rem;
+      overflow: hidden; }
+      .Jiesuan .addr p span:nth-child(1) {
+        float: left; }
+      .Jiesuan .addr p span:nth-child(2) {
+        float: right; }
+    .Jiesuan .addr div {
+      padding: 0.3125rem 0.625rem 0 1.875rem; }
+      .Jiesuan .addr div span {
+        float: left; }
+      .Jiesuan .addr div i {
+        float: right;
+        font-size: 20px; }
+  .Jiesuan .jsGoods {
+    background: #fff; }
+    .Jiesuan .jsGoods li {
+      display: flex;
+      padding: 0.625rem;
+      height: 6.875rem;
+      width: 22.5rem;
+      margin: 0.625rem auto;
+      background: #fff;
+      text-align: left; }
+      .Jiesuan .jsGoods li img {
+        width: 6.25rem;
+        height: auto;
+        margin-right: 0.625rem; }
+
+.yhj {
+  background: #fff;
+  margin: 0.625rem auto; }
+  .yhj li {
+    height: 2.1875rem;
+    line-height: 2.1875rem;
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 0.625rem 0 0.9375rem; }
+    .yhj li s {
+      color: red; }
+    .yhj li > i {
+      margin-top: 0.3125rem;
+      float: right; }
+
+.hjd li {
+  font-size: 0.75rem; }
+  .hjd li p > i {
+    margin-top: 5px;
+    float: right; }
+
+.beizhu {
+  background: #fff;
+  padding: 0.625rem 0.9375rem;
+  text-align: left; }
+  .beizhu s {
+    color: red; }
+  .beizhu > p {
+    color: red;
+    font-size: 0.75rem;
+    margin: 0.625rem 0px; }
+  .beizhu > div {
+    margin: 0.625rem 0px; }
+
+.price-count {
+  width: 23.4375rem;
+  font-size: 1rem;
+  margin-top: 0.9375rem;
+  background: #fff;
+  padding: 0.625rem; }
+  .price-count p {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #cccccc; }
+    .price-count p span {
+      float: right;
+      color: #dd524d; }
+  .price-count button {
+    width: 90%;
+    margin: 1.25rem auto;
+    height: 50px;
+    line-height: 50px;
+    background: #dd524d;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; }
+
+.payWay {
+  background: #fff;
+  width: 22.5rem;
+  height: 8.125rem;
+  background: #fff;
+  margin: 0.625rem auto;
+  padding: 0.625rem 0 0 1.875rem; }
+  .payWay .ant-radio-group-outline {
+    float: left; }
+  .payWay h4 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-align: left; }
+  .payWay > div p {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    text-align: left; }
+    .payWay > div p label {
+      font-size: 1rem; }
+      .payWay > div p label i {
+        font-size: 1.5rem;
+        margin-right: 5px; }
+
+.shouHuo {
+  background: #eaeaea; }
+
+.goPay {
+  padding-bottom: 2.5rem; }
+  .goPay button {
+    margin-left: 200px;
+    width: 6.25rem;
+    height: 2.5rem;
+    color: #fff;
+    border: 1px solid #dd524d;
+    background-color: #dd524d; }

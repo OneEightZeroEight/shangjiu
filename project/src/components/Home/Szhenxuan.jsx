@@ -60,11 +60,12 @@ class Szhenxuan extends React.Component {
                 {
                     (()=>{
                         return this.state.zxlist.map((item,index)=>{
-                            return  (<div className="swiper-container " key={index}>
-                                    <div className="swiper-wrapper" style={{transform: "translate3d(0px, 0px, 0px)"}} style={{
-                                        width:"33%",
-                                        float:"left"
-                                    }}>
+                            if(index == 5){return ;}
+                            return  (<div className="swiper-container " key={index}   style={{
+                                    width:"33%",
+                                    float:"left"
+                                }}>
+                                    <div className="swiper-wrapper" style={{transform: "translate3d(0px, 0px, 0px)"}}>
                                         <div className="zhenX swiper-slide swiper-slide-active" style={{width: "115px", marginRight: "10px"}}>
                                             <a className="list-content-item" href={item.href} style={{width:"100%",border:"0"}}>
                                                 <img src={item.url} alt="蓓姬城堡副牌干红葡萄酒2012" />
@@ -81,7 +82,7 @@ class Szhenxuan extends React.Component {
                         })
                     })()     
                 }  
-            </div>
+            {/*</div>*/}
 
             <div className="xiaotu">
                 <img src="./20180930112726_9743.jpg" alt="tp" />
@@ -136,6 +137,7 @@ class Szhenxuan extends React.Component {
                 <div className="dibu">
                     <span>E N D</span>
                 </div>
+            
             </div>
         );
     }
