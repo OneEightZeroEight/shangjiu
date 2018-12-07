@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="057f82d2-65c4-4a97-9190-23410cdd0772" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/Home/Szhenxuan.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/Home/Szhenxuan.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/My/PersonalCenter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/My/PersonalCenter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/My/SMy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/My/SMy.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/My/Shopcar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/My/Shopcar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/common/bottom.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/common/bottom.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/shouye.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/shouye.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/sass/my.scss" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/sass/my.scss" afterDir="false" />
-    </list>
+    <list default="true" id="057f82d2-65c4-4a97-9190-23410cdd0772" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -46,6 +35,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SMy.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/src/components/My/SMy.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonalCenter.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PersonalCenter.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/src/components/My/PersonalCenter.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+            <state relative-caret-position="131">
+              <caret line="110" column="55" lean-forward="true" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -84,14 +85,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shopcar.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Shopcar.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/src/components/My/Shopcar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="-528">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/src/data/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -116,27 +126,6 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/components/My/Login.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="41" column="31" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMy.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/src/components/My/SMy.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -252,7 +241,7 @@
       <path value="$PROJECT_DIR$/project/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1462" />
@@ -419,6 +408,7 @@
   </component>
   <component name="RunManager" selected="Node.js.server.js">
     <configuration name="Login.jsx" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="Login.jsx" working-dir="$PROJECT_DIR$/project/src/components/My" />
+    <configuration name="Shopcar.jsx" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="Shopcar.jsx" working-dir="$PROJECT_DIR$/project/src/components/My" />
     <configuration name="addressAdmin.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="addressAdmin.js" working-dir="$PROJECT_DIR$/project/src/data/mongo/router" />
     <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/project/src/data" />
     <configuration name="setCode.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="setCode.js" working-dir="$PROJECT_DIR$/project/src/data/mongo/router" />
@@ -427,10 +417,12 @@
       <item itemvalue="Node.js.setCode.js" />
       <item itemvalue="Node.js.Login.jsx" />
       <item itemvalue="Node.js.addressAdmin.js" />
+      <item itemvalue="Node.js.Shopcar.jsx" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.server.js" />
+        <item itemvalue="Node.js.Shopcar.jsx" />
         <item itemvalue="Node.js.addressAdmin.js" />
         <item itemvalue="Node.js.Login.jsx" />
         <item itemvalue="Node.js.setCode.js" />
@@ -451,15 +443,15 @@
       <workItem from="1543837599234" duration="3563000" />
       <workItem from="1543842629753" duration="1454000" />
       <workItem from="1543847100438" duration="5150000" />
-      <workItem from="1543886549916" duration="123864000" />
+      <workItem from="1543886549916" duration="125352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145400000" />
+    <option name="totallyTimeSpent" value="146888000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1453" height="873" extended-state="6" />
+    <frame x="-6" y="-6" width="1453" height="873" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="0" />
@@ -469,7 +461,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.45865184" side_tool="true" weight="0.39027596" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3298292" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.52050036" visible="true" weight="0.1195795" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.52050036" visible="true" weight="0.33114323" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.54134816" weight="0.116951376" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -494,9 +486,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/scripts/start.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -687,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/data/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/data/mongo/model/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -771,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/components/My/SMy.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/src/components/Home/Szhenxuan.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2156">
@@ -837,20 +812,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/components/My/PersonalCenter.jsx">
+    <entry file="file://$PROJECT_DIR$/dababase.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/data/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+        <state relative-caret-position="748">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/components/My/Shopcar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/src/components/My/Shopcar.jsx">
+    <entry file="file://$PROJECT_DIR$/project/src/components/My/SMy.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="132">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/src/components/My/PersonalCenter.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="110" column="55" lean-forward="true" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
