@@ -18,6 +18,10 @@ class Jiesuan extends React.Component {
 
         }
     }
+
+    goZhifu(){
+        this.props.history.push("/my/zhifu/")
+    }
     render() {
         return (
             <div style={{overflow: "hidden"}} className="Jiesuan">
@@ -119,7 +123,7 @@ class Jiesuan extends React.Component {
                     <p>红酒豆抵扣<span id="beansDiscountAmount">- ￥ 0.00</span></p>
                     <p>运输费用<span id="expressPrice">￥ 0.00</span></p>
                     <p>应付金额<span id="totalAmount">￥ 166.00</span></p>
-                    <button>提 交 订 单</button>
+                    <button onClick={this.goZhifu.bind(this)}>提 交 订 单</button>
                 </div>
             </div>
 

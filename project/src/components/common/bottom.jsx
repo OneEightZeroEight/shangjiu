@@ -32,7 +32,9 @@ class Bottom extends React.Component {
 
     render() {
         return (
-            <div className="syBottom clearfix">
+            <div className="syBottom clearfix" style={{
+                zIndex:"9999"
+            }}>
                 <ul>
                     <li>
                         <Link to='/home/'>

@@ -21,6 +21,9 @@ class Shopcar extends React.Component {
     goBack(){
         this.props.history.goBack();
     }
+    goJiesuan(){
+        this.props.history.push("/my/jiesuan/");
+    }
 
     quanxuanBtn(){
         this.setState({
@@ -84,7 +87,7 @@ class Shopcar extends React.Component {
                         <span>总计：<b>￥0.00</b></span>
                         <span>共0件商品</span>
                     </p>
-                    <button>结&nbsp;&nbsp;算</button>
+                    <button onClick={this.goJiesuan.bind(this)}>结&nbsp;&nbsp;算</button>
                 </div>
 
             </div>
