@@ -21,6 +21,11 @@ class Szhenxuan extends React.Component {
             console.log(error);
         });
     }   
+    setGoods(id){
+        var storage = window.localStorage;
+        storage.setItem("goodId",id);
+        this.props.history.push("/detail/");    
+    } 
     
     componentDidMount() {
         this.getIndexInfo();
@@ -39,7 +44,7 @@ class Szhenxuan extends React.Component {
                 {
                     (()=>{
                         return this.state.zxlist.map((item,index)=>{
-                            return  <div className="swiper-container " key={index}>
+                            return  (<div className="swiper-container " key={index}>
                                     <div className="swiper-wrapper" style={{transform: "translate3d(0px, 0px, 0px)"}} style={{
                                         width:"33%",
                                         float:"left"
@@ -56,6 +61,7 @@ class Szhenxuan extends React.Component {
                                     </div>
                                     <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                                 </div>
+                            )
                         })
                     })()     
                 }  
@@ -96,15 +102,15 @@ class Szhenxuan extends React.Component {
                     {
                         (()=>{
                             return this.state.zxlist.map((item,index)=>{
-                                return  <a className="list-content-item" href={item.href }  key={index}>
-                                        <img className="lazy" data-original="/upload/thumb_220x220/20180918/20180918110347_5856.jpg" alt="" src={item.url} />
+                                return  (<a className="list-content-item" href="javascript:;"  key={index} onClick={this.setGoods.bind(this,item.Id)}>
+                                        <img className="lazy"  alt="" src={item.url} />
                                         <p className="msg" style={{color:"#565656"}}>{item.name}</p>
                                         <p className="msg" style={{fontSize:"12px"}}>CLOS RENE 2014</p>
                                         <p className="msg" style={{fontSize:"12px"}}>{item.address}</p>
                                         <p className="text-price" style={{color:"red",fontSize:"16px"}}>
                                             ￥{item.price}
                                         </p>
-                                    </a>     
+                                    </a> )    
                             });
                         })()
                     }

@@ -10,8 +10,7 @@ class Detail extends Component {
         return (
             <div>
                 <Dheader></Dheader>
-                <Dcontent></Dcontent>
-                
+                <Dcontent></Dcontent>    
             </div>
         );
     }

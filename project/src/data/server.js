@@ -23,10 +23,11 @@ app.all("*",function(req,res,next){
 
 app.get("/getGoods",(req,res)=>{
     // cors
+    console.log(req.query)
     res.append("Access-Control-Allow-Origin","*");
     request.post("https://m.winex-hk.com/api/goods/index",(err,response,body)=>{
         res.header("Access-Control-Allow-Origin","*");
-        console.log(response);
+       
 
         res.send(body);
     })

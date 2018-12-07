@@ -1,19 +1,25 @@
 import React from "react";
 import {Icon} from "antd";
 import { Spin, Alert } from 'antd';
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+const location = history.location;
 
 class GoodsList extends React.Component {
     constructor(props){
         super(props);
         this.props = props;
         this.state = {
-            goodslist:[]
+            goodslist:[],
+            currentPage:0,
+
         }
     }
     getGoods(){
-        React.axios.get("http://127.0.0.1:4000/getGoods")
+        let page = this.state.currentPage+1
+        React.axios.get("http://127.0.0.1:4000/getGoods?page="+page+"&direct="+"asc"+"&sort="+"quantity"+"&getProps="+ 1)
         .then((res)=>{
-            console.log(res.data);
+            console.log(res);
             this.setState({
                 goodslist:res.data.data.Goods.List
             })
@@ -21,13 +27,18 @@ class GoodsList extends React.Component {
         .catch(function (error) {
             console.log(error);
         });
-    }   
+    }  
+    setGoods(id){
+        var storage = window.localStorage;
+        storage.setItem("goodId",id);
+        this.props.history.push("/detail/");    
+    } 
     
-    componentDidMount() {
+    componentWillMount() {
         this.getGoods();
-        window.onscroll=(e)=>{
-
-        }
+        var storage = window.localStorage;
+        var idx = storage.getItem("Index");
+       console.log(idx)
     }
 
     render() {
@@ -38,15 +49,15 @@ class GoodsList extends React.Component {
                     {
                         (()=>{
                             return this.state.goodslist.map((item,index)=>{
-                                return  <li>
+                                return  <li onClick={this.setGoods.bind(this,item.Id)}>
                                             <div className="list-item">
                                                 <div className="p">
-                                                    <a href="" className="list-content-item">
+                                                    <a href="javascript:;" className="list-content-item">
                                                         <img src={"https://m.winex-hk.com"+item.ImgUrl} alt="" className="lazy" style={{width:"161px",height:"161px"}}/>
                                                     </a>
                                                 </div> 
                                                 <div className="d">
-                                                    <a href="" className="clearfix">
+                                                    <a href="javascript:;" className="clearfix">
                                                         <p className="d-item-name">{item.Name}</p> 
                                                         <p className="d-item-name2">{item.NameEng}</p> 
                                                         <span className="d-price">¥ {item.RealPrice}</span> 
