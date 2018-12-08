@@ -37,8 +37,8 @@ class SMy extends React.Component {
                 <Route path="/my/addaddress/" component={AddAddress} />
                 <Route path="/my/editaddress/" component={EditAddress} />
                 <Route path="/my/userinfo/" component={UserInfo} />
-                <Route path="/my/jiesuan/" component={Jiesuan} />
-                <Route path="/my/zhifu/" component={Zhifu} />
+                <Route path="/my/jiesuan/" history={this.props.history} component={Jiesuan} />
+                <Route path="/my/zhifu/" history={this.props.history} component={Zhifu} />
             </div>
 
         )

@@ -27,7 +27,7 @@ app.get("/getGoods",(req,res)=>{
     res.append("Access-Control-Allow-Origin","*");
     request.post("https://m.winex-hk.com/api/goods/index",
         {
-            page: 1,
+            page: req.query.page,
             pageSize: 20,
             getProps: 1,
             categoryId: 0,
@@ -46,7 +46,7 @@ app.get("/getGoods",(req,res)=>{
 
         },(err,response,body)=>{
         res.header("Access-Control-Allow-Origin","*");
-       
+
        console.log(body)
 
         res.send(body);

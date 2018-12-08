@@ -98,7 +98,7 @@ class Zhifu extends React.Component {
                     </div>
 
                     <div className="goPay">
-                        <Button type="primary" onClick={this.props.goAliPay.bind(this)}>去支付</Button>
+                        <Button type="primary" onClick={this.goAliPay.bind(this)}>去支付</Button>
                     </div>
 
                 </div>
