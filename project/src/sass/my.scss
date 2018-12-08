@@ -353,36 +353,7 @@ ul, li {
       }
     }
   }
-  .tuijian {
-    width: pxToRem(375px);
-    h3 {
-      height: pxToRem(35px);
-      line-height: pxToRem(35px);
-    }
-    ul {
-      padding-bottom: pxToRem(80px);
-      display: flex;
-      width: pxToRem(365px);
-      margin: 0 auto;
-      flex-wrap: wrap;
-      li {
-        width: 33%;
-        background: #fff;
-        p {
-          margin-bottom: 0px;
-          width: 100%;
-          height: pxToRem(20px);
-          overflow: hidden;
-        }
-        img {
-          width: pxToRem(120px);
-          height: pxToRem(120px);
 
-        }
-      }
-
-    }
-  }
 }
 
 .newAddrBtn {
@@ -700,3 +671,34 @@ ul, li {
 }
 
 
+
+.tuijian {
+  width: pxToRem(375px);
+  h3 {
+    height: pxToRem(35px);
+    line-height: pxToRem(35px);
+  }
+  ul {
+    padding-bottom: pxToRem(80px);
+    display: flex;
+    width: pxToRem(365px);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    li {
+      width: 33%;
+      background: #fff;
+      p {
+        margin-bottom: 0px;
+        width: 100%;
+        height: pxToRem(20px);
+        overflow: hidden;
+      }
+      img {
+        width: pxToRem(120px);
+        height: pxToRem(120px);
+
+      }
+    }
+
+  }
+}

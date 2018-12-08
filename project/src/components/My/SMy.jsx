@@ -31,7 +31,7 @@ class SMy extends React.Component {
             <div>
                 <Route path="/my/login/" component={Login} />
                 <Route path="/my/register/" component={Register} />
-                <Route path="/my/center/" component={PersonCenter} />
+                <Route path="/my/center/" component={PersonCenter} className="animated zoomIn"/>
                 <Route path="/my/shopcar/" component={Shopcar} />
                 <Route path="/my/address/" component={MyAddress} />
                 <Route path="/my/addaddress/" component={AddAddress} />

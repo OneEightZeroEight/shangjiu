@@ -122,7 +122,7 @@ class PersonalCenter extends React.Component {
                             我的礼品
                             <span className="mui-icon mui-icon-arrowright mui-pull-right"></span>
                         </a>
-                        <a className="mui-table-view-cell" href="/user/myInvite?inUid=104979">
+                        <a className="mui-table-view-cell" >
                             <Icon type="branches" />
                             邀请注册有礼
                             <span className="mui-icon mui-icon-arrowright mui-pull-right"></span>

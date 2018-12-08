@@ -11,7 +11,7 @@ class List extends Component {
             <div>
                 <ListHeader></ListHeader>
                 <GoodList history={this.props.history}></GoodList>
-                <Bottom></Bottom>
+                <Bottom history={this.props.history}></Bottom>
                 <div>
                     <BackTop />
                     Scroll down to see the bottom-right

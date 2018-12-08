@@ -1,6 +1,7 @@
 import React from "react";
 import {Carousel} from 'antd';
 import {Icon} from "antd";
+import Tuijian from "../My/common/Tuijian"
 
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
@@ -77,6 +78,7 @@ class Szhenxuan extends React.Component {
                                         </div>
                                     </div>
                                     <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                    <Tuijian></Tuijian>
                                 </div>
                             )
                         })

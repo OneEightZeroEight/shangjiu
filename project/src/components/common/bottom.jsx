@@ -33,7 +33,8 @@ class Bottom extends React.Component {
     render() {
         return (
             <div className="syBottom clearfix" style={{
-                zIndex:"9999"
+                zIndex:"9999",
+                borderTop:"1px solid rgb(206, 205, 205)"
             }}>
                 <ul>
                     <li>
