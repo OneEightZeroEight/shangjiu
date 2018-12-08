@@ -15,13 +15,36 @@ class GoodsList extends React.Component {
 
         }
     }
+
+
+
+    //数组对象方法排序:
+    //  sortByKey(array,key){
+    //     return array.sort(function(a,b){
+    //         var x=a[key];
+    //         var y=b[key];
+    //         return ((x<y)?-1:((x>y)?1:0));
+    //     });
+    // }
+    sortByKey(array,key){
+            return array.sort(function(a,b){
+                var x=a[key];
+                var y=b[key];
+                return ((x<y)?-1:((x>y)?1:0));
+            });
+        }
+
+
     getGoods(){
         let page = this.state.currentPage+1
         React.axios.get("http://127.0.0.1:4000/getGoods?page="+page+"&direct="+"asc"+"&sort="+"quantity"+"&getProps="+ 1)
         .then((res)=>{
             console.log(res);
+            let sortArr = this.sortByKey(res.data.data.Goods.List,res.data.data.Goods.List.RealPrice);
+            console.log(sortArr)
+            console.log(this.sortByKey(res.data.data.Goods.List,res.data.data.Goods.List.RealPrice))
             this.setState({
-                goodslist:res.data.data.Goods.List
+                goodslist:sortArr
             })
         })
         .catch(function (error) {
