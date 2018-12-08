@@ -80,6 +80,8 @@ const qgoodRouter = require('./mongo/router/QGoods.js');
 app.use("/qgood",qgoodRouter);
 
 
+const jgoodRouter = require('./mongo/router/JGoods.js');
+app.use("/jgood",jgoodRouter);
 
 
 

@@ -6,8 +6,14 @@ class Dcontent extends React.Component {
         this.props = props;
         this.state = {
            id:'',
-           goodlist:[]
+           goodlist:[],
+           isShow:false
         }
+    }
+    isShow(){
+        this.setState({
+            isShow:true
+        })
     }
     getGoods(){
         var storage = window.localStorage;
@@ -180,7 +186,7 @@ class Dcontent extends React.Component {
                                 <p>购物车</p>
                             </a>
                         </li>
-                            <li className="mui-col-xs-3 addtocart">
+                            <li className="mui-col-xs-3 addtocart" onClick={this.isShow.bind(this)}>
                                 加入购物车
                             </li>
                             <li className="mui-col-xs-3 buynow">

@@ -3,6 +3,10 @@ import { Route } from "react-router-dom";
 import Dheader from '../components/detail/Dheader.jsx';
 import Dcontent from '../components/detail/Dcontent.jsx';
 import Bottom from '../components/common/bottom.jsx';
+import Variety from '../components/detail/Variety.jsx';
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
+const location = history.location;
 
 
 class Detail extends Component {
@@ -10,7 +14,8 @@ class Detail extends Component {
         return (
             <div>
                 <Dheader history={this.props.history}></Dheader>
-                <Dcontent></Dcontent>    
+                <Dcontent></Dcontent>
+                <Variety history={this.props.history}></Variety>    
             </div>
         );
     }

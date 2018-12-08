@@ -28,6 +28,9 @@ class Shopcar extends React.Component {
         })
         console.log(this.state.qxBtn)
     }
+    getlist(){
+        
+    }
 
     render() {
         return (
