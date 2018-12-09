@@ -78,7 +78,6 @@ class Szhenxuan extends React.Component {
                                         </div>
                                     </div>
                                     <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                                   
                                 </div>
                             )
                         })

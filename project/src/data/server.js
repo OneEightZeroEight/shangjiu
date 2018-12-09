@@ -12,21 +12,25 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-
-
 //跨域问题要加上
 app.all("*",function(req,res,next){
     res.header("Access-Control-Allow-Origin","*");
     next();
 })
 
-
 app.get("/getGoods",(req,res)=>{
     // cors
     console.log(req.query)
     res.append("Access-Control-Allow-Origin","*");
-    request.post("https://m.winex-hk.com/api/goods/index",
-        {
+
+
+    request({
+        method:"POST",
+        url:"https://m.winex-hk.com/api/goods/index",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:{
             page: req.query.page,
             pageSize: 20,
             getProps: 1,
@@ -43,14 +47,25 @@ app.get("/getGoods",(req,res)=>{
             sort: "date",
             direct: "asc",
             goodsType: 0
+        },
+        json:true      //这个针对body是不是支持json
 
-        },(err,response,body)=>{
+    },(error,response,body)=>{
         res.header("Access-Control-Allow-Origin","*");
-
-       console.log(body)
-
+        console.log(body);
         res.send(body);
     })
+
+    //不带参数的写法
+    // request.post("https://m.winex-hk.com/api/goods/index",
+    //    ,(err,response,body)=>{
+    //     res.header("Access-Control-Allow-Origin","*");
+    //    console.log(body)
+    //     res.send(body);
+    // })
+
+
+
 })
 
 
