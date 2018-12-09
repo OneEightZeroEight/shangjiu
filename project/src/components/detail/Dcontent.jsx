@@ -1,13 +1,22 @@
 import React from "react";
 import {Icon} from "antd";
+import axios from "axios";
+import qs from "qs";
+
 class Dcontent extends React.Component {
     constructor(props){
         super(props);
         this.props = props;
         this.state = {
            id:'',
-           goodlist:[]
+           goodlist:[],
+           isShow:false,
         }
+    }
+    isShow(){
+        this.setState({
+            isShow:true
+        })
     }
     getGoods(){
         var storage = window.localStorage;
@@ -45,16 +54,17 @@ class Dcontent extends React.Component {
     }
 
     render() {
-
-        return (
             
-            <div className="Xcontainer goods-detail">
+            return (
+                <div className="Xcontainer goods-detail">
+
+            {
+                (()=>{
+                    return this.state.goodlist.map((item,index)=>{
+                        return (
+                             <div key={index}>
                 <div id="mainContent">
-                 {
-                    (()=>{
-                        return this.state.goodlist.map((item,index)=>{
-                            return (
-                                 <div key={index}>
+                 
                     <div id="focus" className="focus" style={{height:"100vw"}}>
                         <div className="hd">
                             <ul><li className="on"></li></ul>
@@ -91,12 +101,7 @@ class Dcontent extends React.Component {
                                 </span>
                             </p>
                         </div>
-                        </div> 
-                        )
-
-                    })
-                })()
-            }
+                        
 
                     </div>
                 <a id="detailContent">
@@ -180,7 +185,7 @@ class Dcontent extends React.Component {
                                 <p>购物车</p>
                             </a>
                         </li>
-                            <li className="mui-col-xs-3 addtocart">
+                            <li className="mui-col-xs-3 addtocart" >
                                 加入购物车
                             </li>
                             <li className="mui-col-xs-3 buynow">
@@ -190,8 +195,19 @@ class Dcontent extends React.Component {
                 </div>
                 
             </div>
+                        )
+
+                    })
+                })()
+            }
+            </div> 
         );
+            
+                       
     }
+
+
+
 }
 
 export default Dcontent;

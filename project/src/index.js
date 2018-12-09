@@ -22,6 +22,7 @@ import './css/my.css';
 import './sass/shouye.scss';
 import './sass/GoodList.scss';
 import './sass/Detail.scss';
+import '../node_modules/animate.css/animate.css';
 
 import App from './App';
 import * as serviceWorker from './libs/serviceWorker';

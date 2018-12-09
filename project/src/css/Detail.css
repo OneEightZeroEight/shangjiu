@@ -172,3 +172,122 @@ html, body {
       color: #fff;
       line-height: 47px;
       font-size: 16px; }
+
+.tocart-box {
+  position: fixed;
+  left: 0;
+  bottom: -100px;
+  z-index: 1001;
+  width: 100%;
+  height: 274px;
+  overflow: auto;
+  background: #f1f1f3; }
+  .tocart-box .info-box {
+    height: 121px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #d4d4d4; }
+    .tocart-box .info-box img {
+      float: left;
+      max-width: 71px;
+      max-height: 71px;
+      margin-left: 20px; }
+    .tocart-box .info-box .info-text {
+      float: left;
+      height: 2rem;
+      margin-top: .55rem;
+      margin-left: 10px; }
+      .tocart-box .info-box .info-text .text-price {
+        margin-top: 5px !important;
+        font-size: 16px !important;
+        color: #bb0511 !important; }
+  .tocart-box .version-box {
+    padding: .5rem 1.15rem; }
+    .tocart-box .version-box .version-title {
+      margin-bottom: 5px;
+      text-align: left; }
+    .tocart-box .version-box ul {
+      height: 2rem; }
+      .tocart-box .version-box ul li {
+        float: left;
+        margin-left: 10px;
+        padding: 7px;
+        border: 1px solid #bb0511;
+        font-size: 13px;
+        color: #333; }
+  .tocart-box .num-box {
+    float: left;
+    padding-top: 20px;
+    padding-left: 1.15rem;
+    border-top: 1px solid #ececec; }
+    .tocart-box .num-box span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      color: #333; }
+    .tocart-box .num-box .mui-numbox {
+      display: inline-block;
+      overflow: hidden;
+      width: 120px;
+      height: 35px;
+      vertical-align: middle;
+      border: solid 1px #bbb;
+      border-radius: 3px;
+      background-color: #efeff4; }
+      .tocart-box .num-box .mui-numbox .mui-btn-numbox-minus {
+        font-size: 18px;
+        float: left;
+        font-weight: 400;
+        line-height: 35px;
+        overflow: hidden;
+        width: 40px;
+        height: 35px;
+        color: #555;
+        background-color: #f9f9f9; }
+      .tocart-box .num-box .mui-numbox .mui-input-numbox {
+        display: inline-block;
+        overflow: hidden;
+        width: 33px;
+        height: 35px;
+        padding: 0 3px !important;
+        text-align: center;
+        text-overflow: ellipsis;
+        word-break: normal;
+        border-right: solid 1px #ccc !important;
+        border-left: solid 1px #ccc !important;
+        border-radius: 0 !important; }
+      .tocart-box .num-box .mui-numbox .mui-btn-numbox-plus {
+        float: right;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 35px;
+        overflow: hidden;
+        width: 40px;
+        height: 35px;
+        color: #555;
+        background-color: #f9f9f9; }
+    .tocart-box .num-box span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      color: #333; }
+  .tocart-box .btn-confirm {
+    position: fixed;
+    bottom: -2rem;
+    z-index: 1000;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    background: #aa1f24;
+    color: #fff;
+    font-size: 18px; }
+
+.mask {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; }
