@@ -2,6 +2,8 @@ import React from "react";
 import {Icon} from "antd";
 import "animate.css";
 import createHistory from 'history/createBrowserHistory';
+import axios from "axios";
+import qs from "qs";
 const history = createHistory();
 const location = history.location;
 class Varirty extends React.Component {
@@ -10,18 +12,11 @@ class Varirty extends React.Component {
         this.props = props;
         this.state = {
             goodlist:[],
-            isShow:false
+            isShow:true,
         }
     }
     back(){
         history.goBack();
-    }
-    isHide(){
-        this.setState({
-            isShow: false
-        })
-         console.log(123)
-        // this.props.history.push('/my/shopcar/');
     }
     getGoods(){
         var storage = window.localStorage;
@@ -53,6 +48,28 @@ class Varirty extends React.Component {
         });
         
     } 
+    addGoods(Id,Name,ImgUrl,Stock,NameEng,RealPrice){
+        console.log(Id,Name,Stock)
+        axios({
+            method:"post",
+            url:"http://127.0.0.1:4000/jgood/addGoods",
+            header:{ "content-type": "application/x-www-form-urlencoded" },
+            data: qs.stringify({
+                _id:Id,
+                name:Name,
+                imgpath:ImgUrl,
+                desc:NameEng,
+                price:RealPrice,
+                stock:Stock
+            })
+        })
+        .then((res)=>{
+            console.log(res)
+        })
+        .catch(function(err){
+            console.log(err);
+        })
+    }
 
     componentWillMount() {
         this.getGoods();
@@ -60,13 +77,14 @@ class Varirty extends React.Component {
     render() {
         return (
             <div style={{display:this.state.isShow?'block':'none'}}>
-            
-                <div className="tocart-box" style={{bottom: "46px"}}>
-                {
+            {
                     (()=>{
                         return this.state.goodlist.map((item,index)=>{
                             return (
                                 <div key={index}>
+            
+                <div className="tocart-box" style={{bottom: "46px"}}>
+                
                                     <div className="info-box mui-clearfix">
                                         <img src={'https://m.winex-hk.com'+item.ImgUrl} alt="" />
                                         <p className="info-text">
@@ -86,11 +104,6 @@ class Varirty extends React.Component {
                                             </a>
                                         </ul>
                                     </div>
-                                </div>
-                            )
-                        })
-                    })()
-                }
                     
                     <div className="num-box clearfix">
                         <span>
@@ -98,17 +111,22 @@ class Varirty extends React.Component {
                         </span>
                         <div className="mui-numbox clearfix" data-numbox-min="1" data-numbox-max="1">
                             <button className="mui-btn mui-btn-numbox-minus" type="button" disabled="">-</button>
-                            <input id="qty" className="mui-input-numbox" type="number" value="1"/>
+                            <input id="qty" className="mui-input-numbox" type="number" />
                             <button className="mui-btn mui-btn-numbox-plus" type="button" disabled="">+</button>
                         </div>
                         <span>库存(1)</span>
                     </div>
-                    <div className="btn-confirm" style={{bottom: "0px"}} onClick={this.isHide.bind(this)}>
+                    <div className="btn-confirm" style={{bottom: "0px"}} onClick={this.addGoods.bind(this,item.Id,item.Name,item.ImgUrl,item.Stock,item.RealPrice)}>
                         确定
                     </div>
                 </div>
                 <div className="mask">
                 </div>
+                 </div>
+                            )
+                        })
+                    })()
+                }
             </div>
         );
     }

@@ -7,11 +7,50 @@ const Goods=require('../model/goods.js');
 
 //增加商品
 Router.post('/addGoods',(req,res)=>{
-
-  let {name,type,desc,price,imgpath,stock}=req.body
- Goods.insertMany({name,type,desc,price,imgpath,stock})
+  let {_id,name,desc,price,imgpath,stock}=req.body
+ Goods.insertMany({_id,name,desc,price,imgpath,stock})
  .then((data)=>{
+    console.log(data)
     res.send({err:0,msg:'插入成功',data:null})
+ })
+ .catch((err)=>{
+
+    console.log(err)
+    res.send({err:-1,msg:'插入失败',data:null})
+ })
+
+})
+
+//查询商品
+Router.post('/getGoods',(req,res)=>{
+
+  let {name} = req.body
+  console.log(req.body)
+ Goods.find()
+ .then((data)=>{
+      return Goods.find({name:{$regex:name}})
+  })
+ .then((data)=>{
+    res.send({err:0,msg:'插入成功',data:data})
+ })
+ .catch((err)=>{
+
+    console.log(err)
+    res.send({err:-1,msg:'插入失败',data:null})
+ })
+
+})
+
+
+//查询商品
+Router.post('/allGoods',(req,res)=>{
+ Goods.find()
+ .then((data)=>{
+      return Goods.find()
+  })
+ .then((data)=>{
+  console.log(data)
+    res.send({err:0,msg:'插入成功',data:data})
  })
  .catch((err)=>{
 
@@ -41,15 +80,12 @@ Router.post('/updateGoods',(req,res)=>{
 
 })
 
-
-
-
 //删除商品
 Router.post('/delGood',(req,res)=>{
   let id=req.body.id;
   Goods.remove({_id:id})
   .then((data)=>{
-    res.send({err:0,msg:'删除成功',data:null})
+    res.send({err:0,msg:'删除成功',data:data})
   })
   .catch((err)=>{
     console.log(err)

@@ -2,8 +2,8 @@
  const mongoose = require('mongoose');
  let Schema = mongoose.Schema;
  let goodsSchema=new Schema({
+    _id:{type:String,required:true},
     name:{type:String,required:true},
-    type:{type:String,required:true},
     desc:{type:String,required:true},
     price:{type:Number,required:true},
     imgpath:{type:String,required:true},

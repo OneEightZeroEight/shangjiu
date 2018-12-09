@@ -9,25 +9,48 @@ import Icon from 'antd/lib/icon';
 import {Button, message} from 'antd';
 const { TextArea } = Input;
 
-var storange = window.localStorage;
+var storage = window.localStorage;
 class Jiesuan extends React.Component {
     constructor(props) {
-        super(props)
-        this.props = props;
-        this.state = {
-
+        super(props);
+        this.props = props;   
+        this.state={
+            goodlist:[]
         }
     }
     goBack(){
-        this.props.history.goBack()
+        this.props.history.goBack();
     }
     goAddr(){
-        this.props.history.push("/my/address/")
+        this.props.history.push("/my/address/");
     }
 
     goZhifuPage(){
-        this.props.history.push("/my/zhifu/")
+        this.props.history.push("/my/zhifu/");
     }
+
+   getlist(){
+        axios({
+            method:"post",
+            url:"http://127.0.0.1:4000/jgood/allGoods",
+            header:{ "content-type": "application/x-www-form-urlencoded" }
+        })
+        .then((res)=>{
+            console.log(res.data.data);
+            this.setState({
+                goodlist:res.data.data
+            })
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+
+    }
+
+    componentDidMount(){
+       this.getlist();
+    }
+
     render() {
         return (
             <div style={{overflow: "hidden"}} className="Jiesuan">
@@ -50,17 +73,28 @@ class Jiesuan extends React.Component {
                         <Icon type="right" onClick={this.goAddr.bind(this)}/>
                     </div>
                 </div>
-
                 <ul className="jsGoods">
-                    <li>
-                        <img src="/imgs/demoGood.jpg" alt=""/>
-                        <div>
-                            <p>mfjdsaldmingzi名字</p>
-                            <p>￥11*1</p>
-                            <span>￥zongjia</span>
-                        </div>
-                    </li>
+                {
+                    (()=>{
+                        return this.state.goodlist.map((item,index)=>{
+                            return(
+                                
+                                    <li key={index}>
+                                        <img src={'https://m.winex-hk.com'+item.imgpath} alt=""/>
+                                        <div>
+                                            <p>{item.name}</p>
+                                            <p>{item.desc}</p>
+                                            <span>￥{item.price}</span>
+                                        </div>
+                                    </li>
+                                
+                            )
+                        })
+                         
+                    })()
+                }
                 </ul>
+               
 
                 <ul className="yhj">
                     <li>

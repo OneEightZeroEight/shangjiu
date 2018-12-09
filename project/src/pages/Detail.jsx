@@ -14,7 +14,7 @@ class Detail extends Component {
         return (
             <div>
                 <Dheader history={this.props.history}></Dheader>
-                <Dcontent></Dcontent>
+                <Dcontent history={this.props.history}></Dcontent>
                 <Variety history={this.props.history}></Variety>    
             </div>
         );

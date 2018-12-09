@@ -15,7 +15,8 @@ class Shopcar extends React.Component {
         super(props)
         this.props = props;
         this.state = {
-            qxBtn: false
+            qxBtn: false,
+            goodlist:[]
         }
     }
     goBack(){
@@ -31,10 +32,44 @@ class Shopcar extends React.Component {
         })
         console.log(this.state.qxBtn)
     }
+   
     getlist(){
-        
-    }
+        axios({
+            method:"post",
+            url:"http://127.0.0.1:4000/jgood/allGoods",
+            header:{ "content-type": "application/x-www-form-urlencoded" }
+        })
+        .then((res)=>{
+            console.log(res.data.data);
+            this.setState({
+                goodlist:res.data.data
+            })
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
 
+    }
+    delgood(Id){
+        axios({
+            method:"post",
+            url:"http://127.0.0.1:4000/jgood/delGood",
+            header:{ "content-type": "application/x-www-form-urlencoded" },
+            data:qs.stringify({
+                id:Id
+            })
+        })
+        .then((res)=>{
+            console.log(res.data);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+
+    }
+     componentDidMount(){
+       this.getlist();
+    }
     render() {
         return (
             <div style={{overflow: "hidden"}} className="Shopcar">
@@ -45,33 +80,43 @@ class Shopcar extends React.Component {
                     <b>我的购物车（<span>0</span>）</b>
                     <span></span>
                 </div>
+
                 <div className="container">
                     <div className="cart">
                         <ul className="mui-clearfix cart-item">
-                            <li>
-                                <div className="left"><Icon type="check-circle" /></div>
-                                <div className="middle">
-                                    <a href="/item/203912.html" className="item-imgbox">
-                                        <img src="/imgs/demoGood.jpg" alt="奥纳亚沃特干红葡萄酒2016" />
-                                    </a>
-                                </div>
-                                <div className="right">
-                                    <div>
-                                        <p className="name">奥纳亚沃特干红葡萄酒2016</p>
-                                        <p className="name-en">LE VOLTE DELL’ORNELLAIA 2016</p>
-                                        <p className="text-price">￥ 221</p>
-                                    </div>
+                        {
+                            (()=>{
+                                return this.state.goodlist.map((item,index)=>{
+                                    return (
+                                         <li key={index}>
+                                            <div className="left"><Icon type="check-circle" /></div>
+                                            <div className="middle">
+                                                <a href="/item/203912.html" className="item-imgbox">
+                                                    <img src={'https://m.winex-hk.com'+item.imgpath} alt="" />
+                                                </a>
+                                            </div>
+                                            <div className="right">
+                                                <div>
+                                                    <p className="name">{item.name}</p>
+                                                    <p className="name-en" style={{overflow:"hidden",width:"156px",height:"24px"}}>{item.desc}</p>
+                                                    <p className="text-price">￥ {item.price}</p>
+                                                </div>
 
-                                    <div className="mui-clearfix edit-box">
-                                        <div>
-                                            <a className="edit-reduce">-</a>
-                                            <input type="number" readOnly="readonly" className="item-quantity" />
-                                            <a className="edit-add">+</a>
-                                            <Icon type="delete" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                                                <div className="mui-clearfix edit-box">
+                                                    <div>
+                                                        <a className="edit-reduce">-</a>
+                                                        <input type="number" readOnly="readonly" className="item-quantity" />
+                                                        <a className="edit-add">+</a>
+                                                        <Icon type="delete" onClick={this.delgood.bind(this,item.Id)}/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        )
+                                })
+                            })()
+                        }
+                           
                         </ul>
                     </div>
                 </div>
