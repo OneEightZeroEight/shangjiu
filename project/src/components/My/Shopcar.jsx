@@ -16,7 +16,8 @@ class Shopcar extends React.Component {
         this.props = props;
         this.state = {
             qxBtn: false,
-            goodlist:[]
+            goodlist:[],
+            showDelGoods:''
         }
     }
     goBack(){
@@ -51,6 +52,7 @@ class Shopcar extends React.Component {
 
     }
     delgood(Id){
+        console.log(Id)
         axios({
             method:"post",
             url:"http://127.0.0.1:4000/jgood/delGood",
@@ -61,6 +63,10 @@ class Shopcar extends React.Component {
         })
         .then((res)=>{
             console.log(res.data);
+            this.setState({
+                showDelGoods:res.data.err
+            })
+            this.getlist();
         })
         .catch((err)=>{
             console.log(err);
@@ -70,6 +76,8 @@ class Shopcar extends React.Component {
      componentDidMount(){
        this.getlist();
     }
+    
+
     render() {
         return (
             <div style={{overflow: "hidden"}} className="Shopcar">
@@ -107,7 +115,7 @@ class Shopcar extends React.Component {
                                                         <a className="edit-reduce">-</a>
                                                         <input type="number" readOnly="readonly" className="item-quantity" />
                                                         <a className="edit-add">+</a>
-                                                        <Icon type="delete" onClick={this.delgood.bind(this,item.Id)}/>
+                                                        <Icon type="delete" onClick={this.delgood.bind(this,item._id)}/>
                                                     </div>
                                                 </div>
                                             </div>

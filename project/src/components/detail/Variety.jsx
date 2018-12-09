@@ -65,6 +65,7 @@ class Varirty extends React.Component {
         })
         .then((res)=>{
             console.log(res)
+             this.props.history.push("/my/Shopcar/");
         })
         .catch(function(err){
             console.log(err);
@@ -116,7 +117,7 @@ class Varirty extends React.Component {
                         </div>
                         <span>库存(1)</span>
                     </div>
-                    <div className="btn-confirm" style={{bottom: "0px"}} onClick={this.addGoods.bind(this,item.Id,item.Name,item.ImgUrl,item.Stock,item.RealPrice)}>
+                    <div className="btn-confirm" style={{bottom: "0px"}} onClick={this.addGoods.bind(this,item.Id,item.Name,item.ImgUrl,item.Stock,item.NameEng,item.RealPrice)}>
                         确定
                     </div>
                 </div>

@@ -83,7 +83,8 @@ Router.post('/updateGoods',(req,res)=>{
 //删除商品
 Router.post('/delGood',(req,res)=>{
   let id=req.body.id;
-  Goods.remove({_id:id})
+  console.log(id)
+  Goods.deleteOne({_id:id})
   .then((data)=>{
     res.send({err:0,msg:'删除成功',data:data})
   })

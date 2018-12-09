@@ -2,6 +2,8 @@ import React from "react";
 import {Icon} from "antd";
 import axios from "axios";
 import qs from "qs";
+import Variety from './Variety.jsx';
+
 
 class Dcontent extends React.Component {
     constructor(props){
@@ -10,12 +12,13 @@ class Dcontent extends React.Component {
         this.state = {
            id:'',
            goodlist:[],
-           isShow:false,
+           showbuy:true
         }
     }
-    isShow(){
+    showBuy(){
+        console.log(2222222)
         this.setState({
-            isShow:true
+            showbuy:false
         })
     }
     getGoods(){
@@ -56,7 +59,9 @@ class Dcontent extends React.Component {
     render() {
             
             return (
+
                 <div className="Xcontainer goods-detail">
+                
 
             {
                 (()=>{
@@ -185,7 +190,7 @@ class Dcontent extends React.Component {
                                 <p>购物车</p>
                             </a>
                         </li>
-                            <li className="mui-col-xs-3 addtocart" >
+                            <li className="mui-col-xs-3 addtocart"  onClick={this.showBuy.bind(this)}>
                                 加入购物车
                             </li>
                             <li className="mui-col-xs-3 buynow">
@@ -200,7 +205,13 @@ class Dcontent extends React.Component {
                     })
                 })()
             }
+            <div style={{
+                display:this.state.showbuy?"none":"block",
+            }}>
+                    <Variety history={this.props.history}/> 
             </div> 
+            </div>
+            
         );
             
                        
