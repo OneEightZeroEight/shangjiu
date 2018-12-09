@@ -18,12 +18,22 @@ class Jiesuan extends React.Component {
 
         }
     }
+    goBack(){
+        this.props.history.goBack()
+    }
+    goAddr(){
+        this.props.history.push("/my/address/")
+    }
+
+    goZhifuPage(){
+        this.props.history.push("/my/zhifu/")
+    }
     render() {
         return (
             <div style={{overflow: "hidden"}} className="Jiesuan">
                 <div className="top-bar" style={{position:"fixed"}}>
                     {/*<a className="action-back" default-back-url="/">*/}
-                    <a className="action-back">
+                    <a className="action-back" onClick={this.goBack.bind(this)}>
                         <Icon type="left"/>
                     </a>
                     <b>填写订单信息</b>
@@ -37,7 +47,7 @@ class Jiesuan extends React.Component {
                     </p>
                     <div>
                         <span>地址gsfdgdfasdafr2eqrewDSA</span>
-                        <Icon type="right" />
+                        <Icon type="right" onClick={this.goAddr.bind(this)}/>
                     </div>
                 </div>
 
@@ -119,7 +129,7 @@ class Jiesuan extends React.Component {
                     <p>红酒豆抵扣<span id="beansDiscountAmount">- ￥ 0.00</span></p>
                     <p>运输费用<span id="expressPrice">￥ 0.00</span></p>
                     <p>应付金额<span id="totalAmount">￥ 166.00</span></p>
-                    <button>提 交 订 单</button>
+                    <button onClick={this.goZhifuPage.bind(this)}>提 交 订 单</button>
                 </div>
             </div>
 

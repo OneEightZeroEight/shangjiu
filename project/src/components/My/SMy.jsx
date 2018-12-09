@@ -31,14 +31,14 @@ class SMy extends React.Component {
             <div>
                 <Route path="/my/login/" component={Login} />
                 <Route path="/my/register/" component={Register} />
-                <Route path="/my/center/" component={PersonCenter} />
+                <Route path="/my/center/" component={PersonCenter} className="animated zoomIn"/>
                 <Route path="/my/shopcar/" component={Shopcar} />
                 <Route path="/my/address/" component={MyAddress} />
                 <Route path="/my/addaddress/" component={AddAddress} />
                 <Route path="/my/editaddress/" component={EditAddress} />
                 <Route path="/my/userinfo/" component={UserInfo} />
-                <Route path="/my/jiesuan/" component={Jiesuan} />
-                <Route path="/my/zhifu/" component={Zhifu} />
+                <Route path="/my/jiesuan/" history={this.props.history} component={Jiesuan} />
+                <Route path="/my/zhifu/" history={this.props.history} component={Zhifu} />
             </div>
 
         )

@@ -19,7 +19,9 @@ class Zhifu extends React.Component {
         this.props = props;
         this.state = {}
     }
-
+    goAliPay(){
+        this.props.history.push("https://auth.alipay.com/login/index.htm?goto=https%3A%2F%2Fwww.alipay.com%2F")
+    }
     render() {
         return (
             <div style={{overflow: "hidden"}} className="Jiesuan">
@@ -49,7 +51,6 @@ class Zhifu extends React.Component {
                     <p>红酒豆抵扣<span id="beansDiscountAmount">- ￥ 0.00</span></p>
                     <p>运输费用<span id="expressPrice">￥ 0.00</span></p>
                     <p>应付金额<span id="totalAmount">￥ 166.00</span></p>
-                    <button>提 交 订 单</button>
                 </div>
 
                 <div style={{
@@ -97,7 +98,7 @@ class Zhifu extends React.Component {
                     </div>
 
                     <div className="goPay">
-                        <Button type="primary">去支付</Button>
+                        <Button type="primary" onClick={this.goAliPay.bind(this)}>去支付</Button>
                     </div>
 
                 </div>

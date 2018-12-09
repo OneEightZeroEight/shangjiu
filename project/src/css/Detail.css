@@ -1,0 +1,174 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #fff; }
+
+.Xtop-bar {
+  position: fixed;
+  z-index: 990;
+  width: 375px;
+  top: 0;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff;
+  font-weight: 600;
+  background: linear-gradient(180deg, #fff, #efefef);
+  float: left; }
+  .Xtop-bar .action-back i {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 45px;
+    line-height: 45px;
+    color: #9a9a9a; }
+  .Xtop-bar .tab-title {
+    text-align: center;
+    padding: 0 .8rem 0 .8rem;
+    color: #999; }
+
+.Xcontainer {
+  margin-top: 45px; }
+  .Xcontainer .focus {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; }
+    .Xcontainer .focus .hd {
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      bottom: .5rem;
+      text-align: center; }
+      .Xcontainer .focus .hd .focus .hd ul {
+        display: inline-block;
+        text-align: center;
+        text-indent: -9999px;
+        overflow: hidden;
+        margin-right: 1rem; }
+        .Xcontainer .focus .hd .focus .hd ul li li {
+          width: .45rem;
+          height: .45rem;
+          margin-left: .5rem;
+          float: left;
+          background: #aaa2bb;
+          border-radius: 50%; }
+    .Xcontainer .focus .bd {
+      position: relative;
+      z-index: 0; }
+  .Xcontainer .prop-box {
+    padding: 12px 0 10px 0;
+    border-top: 1px solid #b3b3b3; }
+    .Xcontainer .prop-box p {
+      margin: 5px 0;
+      padding: 0 8px;
+      line-height: 24px;
+      padding-right: 18px;
+      text-align: left; }
+      .Xcontainer .prop-box p span {
+        color: #aa1f24; }
+    .Xcontainer .prop-box .skill-date {
+      font-size: 16px;
+      background: #dc2445;
+      color: #fff; }
+    .Xcontainer .prop-box .price {
+      line-height: 20px;
+      padding: 5px 7px 12px 7px;
+      border-bottom: 1px solid #b3b3b3;
+      font-size: 20px;
+      color: #aa1f24; }
+      .Xcontainer .prop-box .price .price-tip {
+        line-height: 20px;
+        font-size: 14px;
+        color: #666; }
+      .Xcontainer .prop-box .price .stock {
+        float: right;
+        margin-right: 10px;
+        font-size: 12px;
+        color: #9a9a9a; }
+    .Xcontainer .prop-box .years {
+      width: 100%;
+      overflow: hidden;
+      padding: 5px 8px;
+      line-height: 20px;
+      font-size: 14px; }
+    .Xcontainer .prop-box .service {
+      color: #aa1f24;
+      font-size: 12px;
+      line-height: 21px;
+      position: relative; }
+    .Xcontainer .prop-box .tips {
+      line-height: 24px;
+      padding: 5px 7px;
+      background: #f3f3f3; }
+  .Xcontainer .content-box {
+    background: #fff; }
+    .Xcontainer .content-box h2 {
+      height: 1.6rem;
+      line-height: 1.6rem;
+      text-align: center;
+      background: #f3f3f3;
+      color: #aa1f24;
+      font-size: 16px; }
+    .Xcontainer .content-box .prop-table {
+      width: 360px;
+      margin: .5rem;
+      border-spacing: 0;
+      border-collapse: collapse;
+      color: #999; }
+      .Xcontainer .content-box .prop-table tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit; }
+        .Xcontainer .content-box .prop-table tbody tr {
+          display: table-row;
+          vertical-align: inherit;
+          border-color: inherit;
+          border: 1px solid #999; }
+          .Xcontainer .content-box .prop-table tbody tr td {
+            padding: 5px 0;
+            border: 1px solid #e7e7e7;
+            font-size: 12px;
+            text-align: center;
+            vertical-align: middle;
+            color: #848689; }
+    .Xcontainer .content-box .goods-content {
+      text-align: left;
+      color: #999; }
+
+.footer-placeholder {
+  height: 52px;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0; }
+  .footer-placeholder .goods-detail-bottom {
+    height: 52px; }
+    .footer-placeholder .goods-detail-bottom li {
+      float: left;
+      width: 63px;
+      color: #9a9a9a;
+      padding-top: 5px;
+      box-sizing: border-box; }
+      .footer-placeholder .goods-detail-bottom li p {
+        color: #9a9a9a; }
+      .footer-placeholder .goods-detail-bottom li i {
+        font-size: 24px;
+        color: #9a9a9a; }
+    .footer-placeholder .goods-detail-bottom .addtocart {
+      width: 93px;
+      height: 52px;
+      line-height: 47px;
+      background: #b19377;
+      color: #fff;
+      font-size: 16px; }
+    .footer-placeholder .goods-detail-bottom .buynow {
+      background: #aa1f24;
+      width: 93px;
+      height: 52px;
+      color: #fff;
+      line-height: 47px;
+      font-size: 16px; }

@@ -24,6 +24,9 @@ class AddAddress extends React.Component {
         }
 
     }
+    goBack(){
+        this.props.history.goBack();
+    }
     getUserDate(){
         let obj = this.props.location.state;
         console.log(this.props.location.state)
@@ -108,7 +111,7 @@ class AddAddress extends React.Component {
         return (
             <div style={{overflow: "hidden",backgroundColor:"#fff"}} className="Shopcar">
                 <div className="top-bar">
-                    <a href="/#/my/address/" className="action-back" default-back-url="/">
+                    <a onClick={this.goBack.bind(this)} className="action-back" default-back-url="/">
                         <Icon type="left"/>
                     </a>
                     <b>个人信息</b>

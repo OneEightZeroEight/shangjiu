@@ -1,31 +1,33 @@
 import React from "react";
 import {Icon} from "antd";
+import { connect } from 'react-redux';
+var storage = window.localStorage;
+
+
 class ListHeader extends React.Component {
+
     constructor(props){
         super(props);
         this.props = props;
         this.state = {
-            nav:0,
+            nav:storage.getItem("Index")?storage.getItem("Index"):0,
             navlist:[{
-                title:'综合'
+                title:'综合',
+                sortType:"RealPrice"
             },{
-                title:'销量'
+                title:'销量',
+                sortType:"quantity"
             },{
-                title:'价格'
+                title:'价格',
+                sortType:"RealPrice"
+
             },{
-                title:'新品'
+                title:'新品',
+                sortType:"date"
             },{
                 title:'筛选'
             },]
         }
-    }
-    navigateTo(index, e) {
-        this.setState({
-            nav: index
-        })
-        var storage = window.localStorage;
-        storage.setItem("Index",index);
-        console.log(index)
     }
 
 
@@ -53,14 +55,13 @@ class ListHeader extends React.Component {
                     {
                         (()=>{
                             return this.state.navlist.map((item,index)=>{
-                                return <li onClick={this.navigateTo.bind(this,index)}
+                                return <li onClick={this.props.navigateTo.bind(this,index,item.sortType)}
                                            key={index}
-                                           className={index === this.state.nav ? "current" : ""}
+                                           className={index == this.state.nav?"current" : ""}
                                         >{item.title}</li>  
                             })
                         })()
                     }
-                        
                     </ul>
                 </div>
             </div>
@@ -68,4 +69,21 @@ class ListHeader extends React.Component {
     }
 }
 
-export default ListHeader;
+export default connect((state) => {
+    console.log(state)
+    return state
+}, (dispatch) => {
+    return {
+        navigateTo(index,sortType) {
+            this.setState({
+                nav:index
+            })
+            storage.setItem("Index",index);
+            storage.setItem("sortType",sortType);
+            dispatch({
+                type:"changeSortType",
+                sortType:sortType
+            })
+        }
+    }
+})(ListHeader);

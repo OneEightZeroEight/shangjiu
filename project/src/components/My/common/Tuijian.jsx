@@ -4,8 +4,8 @@ import qs from "qs";
 import {connect} from 'react-redux';
 import '../../../sass/my.scss';
 
-import Icon from 'antd/lib/icon';
 import {message} from "antd/lib/index";
+
 
 class Tuijian extends React.Component {
     constructor(props) {

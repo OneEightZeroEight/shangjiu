@@ -37,6 +37,7 @@ const store = createStore((state = {
         bool: false,
         src: ""
     },
+    sortType:""
 
 }, action) => {
     switch (action.type) {
@@ -50,6 +51,11 @@ const store = createStore((state = {
                 ...state,
                 isShowGallery:action.isShowGallery
             }
+        case 'changeSortType':
+            return {
+                ...state,
+                sortType:action.sortType
+            }
         default:
             return state
     }
@@ -59,7 +65,7 @@ const store = createStore((state = {
 React.axios = axios;
 
 ReactDOM.render(
-    <Provider>
+    <Provider store={store}>
         <Router>
             <App />
         </Router>
