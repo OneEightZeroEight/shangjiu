@@ -12,6 +12,12 @@ const location = history.location;
 
 var storage = window.localStorage;
 
+window.onscroll = ()=>{
+    if(window.scrollY>200){
+        console.log(44)
+    }
+}
+
 class GoodsList extends React.Component {
     constructor(props) {
         super(props);
@@ -33,7 +39,8 @@ class GoodsList extends React.Component {
 
 
     getGoods(sortType) {
-        let page = this.state.currentPage + 1
+        let page = this.state.currentPage + 1;
+        console.log(page)
         React.axios.get("http://127.0.0.1:4000/getGoods?page=" + page + "&direct=" + "asc" + "&sort=" + "quantity" + "&getProps=" + 1)
             .then((res) => {
                 console.log(res);
@@ -67,6 +74,9 @@ class GoodsList extends React.Component {
 
         var idx = storage.getItem("Index");
         console.log(idx)
+        // window.addEventListener('scroll', () =>
+        //     console.log(document.body.scrollTop || document.documentElement.scrollTop)
+        // )
     }
 
     componentWillReceiveProps(nextProps) {
@@ -74,6 +84,7 @@ class GoodsList extends React.Component {
         if (sortType) {
             this.getGoods(sortType);
         }
+
     }
 
     render() {
@@ -128,8 +139,11 @@ export default connect((state) => {
     return state
 }, (dispatch) => {
     return {
-        onIncreaseClick() {
-            dispatch("increaseAction")
+        changePage(goodlistPage) {
+            dispatch({
+                type:"changePage",
+                goodlistPage:goodlistPage
+            })
         }
     }
 })(GoodsList);

@@ -31,7 +31,7 @@ const location = history.location;
 
 const store = createStore((state = {
     uname:"",
-    isShowNav: false,
+    goodlistPage: 1,
     isShowGallery: {
         bool: false,
         src: ""
@@ -40,10 +40,10 @@ const store = createStore((state = {
 
 }, action) => {
     switch (action.type) {
-        case 'toggleNav':
+        case 'changePage':
             return {
                 ...state,
-                isShowNav:action.isShowNav
+                goodlistPage:action.goodlistPage
             }
         case 'toggleGallery':
             return {
