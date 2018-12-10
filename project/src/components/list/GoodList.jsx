@@ -5,18 +5,16 @@ import {Spin, Alert} from 'antd';
 import Tuijian from "../My/common/Tuijian"
 import createHistory from 'history/createBrowserHistory'
 import '../../sass/my.scss';
+import Demo from "../common/Demo";
 
 
 const history = createHistory();
 const location = history.location;
 
 var storage = window.localStorage;
-
-window.onscroll = ()=>{
-    if(window.scrollY>200){
-        console.log(44)
-    }
-}
+let sortArr=[]
+let page = 0;
+let pageSize = 10;
 
 class GoodsList extends React.Component {
     constructor(props) {
@@ -25,6 +23,7 @@ class GoodsList extends React.Component {
         this.state = {
             goodslist: [],
             currentPage: 0,
+            pageSize:10,
             showRedBag:true
         };
     }
@@ -39,22 +38,36 @@ class GoodsList extends React.Component {
 
 
     getGoods(sortType) {
-        let page = this.state.currentPage + 1;
+        this.setState({
+            showRedBag:true
+        })
+        page = page + 1;
+        pageSize = pageSize + 5;
+        console.log(pageSize);
         console.log(page)
-        React.axios.get("http://127.0.0.1:4000/getGoods?page=" + page + "&direct=" + "asc" + "&sort=" + "quantity" + "&getProps=" + 1)
+        React.axios.get("http://127.0.0.1:4000/getGoods?page=" + page + "&pageSize=" + pageSize + "&sort=" + "quantity" + "&getProps=" + 1)
             .then((res) => {
                 console.log(res);
-                let sortArr = this.sortByKey(res.data.data.Goods.List, sortType);
+                if(page == 1){
+                    sortArr = this.sortByKey(res.data.data.Goods.List, sortType);
+                }else{
+                    let sortArr1 = this.sortByKey(res.data.data.Goods.List, sortType);
+                    sortArr = sortArr.concat(sortArr1)
+                }
                 console.log(sortArr)
                 console.log(this.sortByKey(res.data.data.Goods.List, sortType))
-                this.setState({
-                    goodslist: sortArr,
-                });
-                setTimeout(()=>{
+                if(sortArr.length>0){
+                    this.setState({
+                        goodslist: sortArr,
+                        showRedBag:false
+                    });
+                }else {
                     this.setState({
                         showRedBag:false
                     });
-                },500)
+                    return ;
+                }
+
             })
             .catch(function (error) {
                 console.log(error);
@@ -70,13 +83,21 @@ class GoodsList extends React.Component {
     componentWillMount() {
         let sortType = storage.getItem("sortType");
 
-        this.getGoods(sortType);
+        // this.getGoods(sortType);
 
         var idx = storage.getItem("Index");
         console.log(idx)
-        // window.addEventListener('scroll', () =>
-        //     console.log(document.body.scrollTop || document.documentElement.scrollTop)
-        // )
+        window.addEventListener('scroll',() =>{
+                if(window.scrollY >= this.refs.myHeight.clientHeight - 1000){
+                    // console.log("2222")
+                    this.getGoods("date");
+                }else{
+                    
+                }
+                // console.log(this.refs.myHeight.clientHeight)
+        }
+
+        )
     }
 
     componentWillReceiveProps(nextProps) {
@@ -86,10 +107,14 @@ class GoodsList extends React.Component {
         }
 
     }
-
+    componentWillUnmount() {
+        window.onscroll = () => {
+            return
+        }
+    }
     render() {
         return (
-            <div className="list-horizontal">
+            <div className="list-horizontal" ref="myHeight">
 
                 <div className="redbag bounceOutDown" style={{
                     display:this.state.showRedBag?"block":"none"
@@ -129,6 +154,8 @@ class GoodsList extends React.Component {
                     </div>
                 </ul>
                 <Tuijian></Tuijian>
+
+                {/*<Demo getGoods={this.getGoods}/>*/}
             </div>
         );
     }

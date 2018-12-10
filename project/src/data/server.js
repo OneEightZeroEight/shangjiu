@@ -19,11 +19,8 @@ app.all("*",function(req,res,next){
 })
 
 app.get("/getGoods",(req,res)=>{
-    // cors
     console.log(req.query)
     res.append("Access-Control-Allow-Origin","*");
-
-
     request({
         method:"POST",
         url:"https://m.winex-hk.com/api/goods/index",
@@ -32,7 +29,7 @@ app.get("/getGoods",(req,res)=>{
         },
         body:{
             page: req.query.page,
-            pageSize: 20,
+            pageSize: req.query.pageSize,
             getProps: 1,
             categoryId: 0,
             brandId: 0,

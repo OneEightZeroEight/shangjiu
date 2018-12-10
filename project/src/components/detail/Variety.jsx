@@ -1,6 +1,6 @@
 import React from "react";
 import {Icon} from "antd";
-import "animate.css";
+// import "animate.css";
 import createHistory from 'history/createBrowserHistory';
 import axios from "axios";
 import qs from "qs";
@@ -28,12 +28,11 @@ class Varirty extends React.Component {
             console.log(arr)
             let goodsArr = ""
             arr.map((item,index)=>{
-                    if(item.Id == storage.getItem("goodId")){
-                        console.log(item.Id)
-                        
-                            goodsArr = item;                                                           
-                        return item;
-                    }
+                if(item.Id == storage.getItem("goodId")){
+                    console.log(item.Id)
+                        goodsArr = item;
+                    return item;
+                }
 
             this.setState({
                 goodlist:[goodsArr]

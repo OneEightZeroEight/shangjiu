@@ -33,7 +33,7 @@ class Snav extends React.Component {
         var settings = {
             dots: false,
             infinite: true,
-            speed: 500,
+            speed: 100,
             autoplay:true,
             slidesToShow: 1,
             slidesToScroll: 1,

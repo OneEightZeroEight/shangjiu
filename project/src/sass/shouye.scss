@@ -153,7 +153,7 @@
 // 列表
 // 
 .publicBox {
-  padding-left: 16px;
+  //padding-left: 16px;
   background: #f2f2f2;
   .publicTle {
     height: 60px;
@@ -209,7 +209,15 @@
     }
 
   }
+.list-content{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
   .list-content-item {
+    margin-top: 10px;
     display: inline-block;
     width: 170px;
     height: 274px;
@@ -303,5 +311,28 @@
 
   .ant-carousel .slick-slide h3 {
     color: #313131;
+  }
+}
+#navcolor{
+  height: 60px;
+  display: flex;
+  li{
+    height: 60px;
+    a{
+      font-size: 14px;
+      span{
+        font-size: 12px;
+      ;
+      }
+    }
+  }
+  .navcolor{
+    a{
+      i,span{
+
+        color: #d62328;
+      }
+
+    }
   }
 }
